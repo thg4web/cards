@@ -1,0 +1,32 @@
+/* Lunar Field Cards — local webfonts (all SIL OFL 1.1, see OFL-*.txt)
+ * Chakra Petch  — display / headings / card title / section headers
+ * Saira Condensed — utility labels (coordinates, epoch, difficulty, map pins)
+ * Barlow        — body copy (description, tips, facts)
+ */
+
+@font-face{font-family:"Chakra Petch";font-weight:400;font-style:normal;font-display:swap;
+  src:url("ChakraPetch-Regular.ttf") format("truetype")}
+@font-face{font-family:"Chakra Petch";font-weight:500;font-style:normal;font-display:swap;
+  src:url("ChakraPetch-Medium.ttf") format("truetype")}
+@font-face{font-family:"Chakra Petch";font-weight:600;font-style:normal;font-display:swap;
+  src:url("ChakraPetch-SemiBold.ttf") format("truetype")}
+@font-face{font-family:"Chakra Petch";font-weight:700;font-style:normal;font-display:swap;
+  src:url("ChakraPetch-Bold.ttf") format("truetype")}
+
+@font-face{font-family:"Saira Condensed";font-weight:400;font-style:normal;font-display:swap;
+  src:url("SairaCondensed-Regular.ttf") format("truetype")}
+@font-face{font-family:"Saira Condensed";font-weight:500;font-style:normal;font-display:swap;
+  src:url("SairaCondensed-Medium.ttf") format("truetype")}
+@font-face{font-family:"Saira Condensed";font-weight:600;font-style:normal;font-display:swap;
+  src:url("SairaCondensed-SemiBold.ttf") format("truetype")}
+@font-face{font-family:"Saira Condensed";font-weight:700;font-style:normal;font-display:swap;
+  src:url("SairaCondensed-Bold.ttf") format("truetype")}
+
+@font-face{font-family:"Barlow";font-weight:400;font-style:normal;font-display:swap;
+  src:url("Barlow-Regular.ttf") format("truetype")}
+@font-face{font-family:"Barlow";font-weight:400;font-style:italic;font-display:swap;
+  src:url("Barlow-Italic.ttf") format("truetype")}
+@font-face{font-family:"Barlow";font-weight:500;font-style:normal;font-display:swap;
+  src:url("Barlow-Medium.ttf") format("truetype")}
+@font-face{font-family:"Barlow";font-weight:600;font-style:normal;font-display:swap;
+  src:url("Barlow-SemiBold.ttf") format("truetype")}

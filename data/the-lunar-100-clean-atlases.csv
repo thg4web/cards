@@ -1,0 +1,101 @@
+L,Feature Name,Significance,Lat. (°),Long. (°),Diam. (km),Rükl Chart,21st Century Atlas Chart,Notes
+1,Moon,Large satellite,—,—,"3,476",—,—,
+2,Earthshine,Twice reflected sunlight,—,—,—,—,—,
+3,Mare/highland dichotomy,Two materials with distinct compositions,—,—,—,—,—,
+4,Apennines,Imbrium basin rim,18.9N,3.7W,70,22,"11, 18, B6",
+5,Copernicus,Archetypal large complex crater,9.7N,20.1W,93,31,"17, 22, FM1, B6",
+6,Tycho,Large rayed crater with impact melts,43.4S,11.1W,85,64,"15, FM3, LS2",
+7,Altai Scarp,Nectaris basin rim,24.3S,22.6E,425,57,6,
+8,"Theophilus, Cyrillus, Catharina",Crater sequence illustrating stages of degradation,13.2S,24.0E,—,"46, 57","6, 7, B4",
+9,Clavius,Lacks basin features in spite of its size,58.8S,14.1W,225,72,15,
+10,Mare Crisium,Mare contained in large circular basin,18.0N,59.0E,540,"26, 27, 37, 38","2, B1",index entry: Mare Crisium
+11,Aristarchus,Very bright crater with dark bands on its walls,23.7N,47.4W,40,18,"28, FM1",
+12,Proclus,Oblique-impact rays,16.1N,46.8E,28,26,"2, FM2",
+13,Gassendi,Floor-fractured crater,17.6S,40.1W,101,52,"23, FM3, B7",
+14,Sinus Iridum,Very large crater with missing rim,45.0N,32.0W,260,10,20,
+15,Straight Wall,Best example of a lunar fault,21.8S,7.8W,110,54,"16, B7",index entry: Rupes Recta / Straight Wall
+16,Petavius,Crater with domed & fractured floor,25.1S,60.4E,177,59,4,
+17,Schröter's Valley,Giant sinuous rille,26.2N,50.8W,168,18,28,
+18,Mare Serenitatis dark edges,Distinct mare areas with different compositions,17.8N,23.0E,N/A,24,"8, 11, B5",index entry: Mare Serenitatis
+19,Alpine Valley,Lunar graben,49.0N,3.0E,165,4,10,
+20,Posidonius,Floor-fractured crater,31.8N,29.9E,95,14,"8, B5",
+21,Fracastorius,Crater with subsided & fractured floor,21.5S,33.2E,124,58,"6, B4",
+22,Aristarchus Plateau,Mysterious uplifted region mantled with pyroclastics,26.0N,51.0W,150,18,"B6, B9",
+23,Pico,Isolated Imbrium basin-ring fragment,45.7N,8.9W,25,11,19,index entry: Mt. Pico
+24,Hyginus Rille,Rille containing rimless collapse pits,7.4N,7.8E,220,34,12,
+25,Messier & Messier A,Oblique ricochet-impact pair,1.9S,47.6E,11,48,3,index entry: Messier
+26,Mare Frigoris,Arcuate mare of uncertain origin,56.0N,1.4E,1600,2–6,"9, 10, 19, B6",
+27,Archimedes,Large crater lacking central peak,29.7N,4.0W,83,"12, 22","18, B6",
+28,Hipparchus,First drawing of a single crater,5.5S,4.8E,150,"44, 45",12,
+29,Ariadaeus Rille,"Long, linear graben",6.4N,14.0E,250,34,12,
+30,Schiller,Possible oblique impact,51.9S,39.0W,180,71,"24, B8",
+31,Taruntius,Young floor-fractured crater,5.6N,46.5E,56,37,"2, B4",
+32,Arago Alpha & Beta,Volcanic domes,6.2N,21.4E,26,35,"7, B5",index entry: Arago
+33,Serpentine Ridge,Basin inner-ring segment,27.3N,25.3E,155,24,"8, B5",
+34,Lacus Mortis,Strange crater with rille & ridge,45.0N,27.2E,152,14,"9, 10",
+35,Triesnecker Rilles,Rille family,4.3N,4.6E,215,33,12,
+36,Grimaldi basin,A small two-ring basin,5.5S,68.3W,430,39,"26, FM3",index entry: Grimaldi
+37,Bailly,Barely discernible basin,66.5S,69.1W,303,71,"15, 24, L4, L5",
+38,Sabine & Ritter,Possible twin impacts,1.7N,19.7E,30,35,"7, 12","Sabine ch.7, Ritter ch.12"
+39,Schickard,Crater floor with Orientale basin ejecta stripe,44.3S,55.3W,227,62,"24, FM3",
+40,Janssen Rille,Rare example of a highland rille,45.4S,39.3E,190,"67, 68",5,
+41,Bessel ray,Ray of uncertain origin near Bessel,21.8N,17.9E,N/A,24,11,
+42,Marius Hills,Complex of volcanic domes & hills,12.5N,54.0W,125,"28, 29","27, B9",
+43,Wargentin,A crater filled to the rim with lava or ejecta,49.6S,60.2W,84,70,"24, L5",
+44,Mersenius,Domed floor cut by secondary craters,21.5S,49.2W,84,51,"26, B7",
+45,Maurolycus,Region of saturation cratering,42.0S,14.0E,114,66,14,
+46,Regiomontanus central peak,Possible volcanic peak,28.0S,0.6W,124,55,16,index entry: Regiomontanus
+47,Alphonsus dark spots,Dark-halo eruptions on crater floor,13.7S,3.2W,119,44,"16, FM4, B7, LS2",index entry: Alphonsus
+48,Cauchy region,"Fault, rilles, & domes",10.5N,38.0E,130,36,7,index entries: Cauchy / Cauchy Fault / Cauchy Rille
+49,Gruithuisen Delta & Gamma,Volcanic domes formed with viscous lavas,36.3N,40.0W,20,9,21,index entries: Gruithuisen Delta & Gamma
+50,Cayley Plains,"Light, smooth plains of uncertain origin",4.0N,15.1E,14,34,12,
+51,Davy crater chain,Result of comet-fragment impacts,11.1S,6.6W,50,43,17,
+52,Crüger,Possible volcanic caldera,16.7S,66.8W,45,50,26,
+53,Lamont,Possible buried basin,4.4N,23.7E,106,35,"7, B5",
+54,Hippalus Rilles,Rilles concentric to Humorum basin,24.5S,29.0W,240,"52, 53",23,
+55,Baco,Unusually smooth crater floor & surrounding plains,51.0S,19.1E,69,74,14,
+56,Australe basin,A partially flooded ancient basin,49.8S,84.5E,880,76,"5, B3, F3",index entry: Mare Australe
+57,Reiner Gamma,Conspicuous swirl & magnetic anomaly,7.7N,59.2W,70,28,"27, FM1",
+58,Rheita Valley,Basin secondary-crater chain,42.5S,51.5E,445,68,5,
+59,Schiller-Zucchius basin,Badly degraded overlooked basin,56.0S,45.0W,335,"70, 71","24, B8",
+60,Kies Pi,Volcanic dome,26.9S,24.2W,45,53,23,index entry: Kies Pi
+61,Mösting A,Simple crater close to center of lunar near side,3.2S,5.2W,13,43,17,index entry: Mösting
+62,Rümker,Large volcanic dome,40.8N,58.1W,70,8,"20, B9",
+63,Imbrium sculpture,Basin ejecta near & overlying Boscovich & Julius Caesar,11.0N,12.0E,—,34,12*,"best-guess: Boscovich / Julius Caesar area, ch.12; not separately indexed"
+64,Descartes,Apollo 16 landing site; putative region of highland volcanism,11.7S,15.7E,48,45,13,
+65,Hortensius domes,Dome field north of Hortensius,7.6N,27.9W,10,30,22,index entry: Hortensius
+66,Hadley Rille,Lava channel near Apollo 15 landing site,25.0N,3.0E,—,22,"11, LS1",
+67,Fra Mauro formation,Apollo 14 landing site on Imbrium ejecta,3.6S,17.5W,—,42,17,index entry: Fra Mauro
+68,Flamsteed P,Proposed young volcanic crater & Surveyor 1 landing site,3.0S,44.0W,112,40,26,index entry: Flamsteed ring
+69,Copernicus secondary craters,Rays & craterlets near Pytheas,19.6N,19.1W,4,20,18,index entry: Pytheas (Copernicus secondaries near Pytheas)
+70,Humboldtianum basin,Multi-ring impact basin,57.0N,80.0E,650,7,"9, L1, B1",index entry: Mare Humboldtianum
+71,Sulpicius Gallus dark mantle,Ash eruptions northwest of crater,19.6N,11.6E,12,23,11,index entry: Sulpicius Gallus
+72,Atlas dark-halo craters,Explosive volcanic pits on the floor of Atlas,46.7N,44.4E,87,15,"9, FM2",index entry: Atlas
+73,Smythii basin,Difficult-to-observe basin scarp & mare,2.0S,87.0E,740,"38, 49","3, B1",index entry: Mare Smythii
+74,Copernicus H,Dark-halo impact crater,6.9N,18.3W,5,31,17,
+75,Ptolemaeus B,Saucerlike depression on the floor of Ptolemaeus,8.0S,0.8W,16,44,17,index entry: Ptolemaeus
+76,W. Bond,Large crater degraded by Imbrium ejecta,65.3N,3.7E,158,4,10,
+77,Sirsalis Rille,Procellarum basin radial rilles,15.7S,61.7W,425,"39, 50",26,
+78,Lambert R,"A buried ""ghost"" crater",23.8N,20.6W,54,20,18,index entry: Lambert
+79,Sinus Aestuum,Eastern dark-mantle volcanic deposit,12.0N,3.5W,90,33,"17, 18, B6",
+80,Orientale basin,Youngest large impact basin,19.0S,95.0W,930,50,"25, 26, B8, F4",index entries: Orientale Basin / Mare Orientale
+81,Hesiodus A,Concentric crater,30.1S,17.0W,15,54,16,
+82,Linné,Small crater once thought to have disappeared,27.7N,11.8E,2.4,23,11,
+83,Plato craterlets,Crater pits at limits of detection,51.6N,9.4W,101,"3, 4","19, FM1, B6",index entry: Plato
+84,Pitatus,Crater with concentric rilles,29.8S,13.5W,97,54,"16, 24, B7",
+85,Langrenus rays,Aged ray system,8.9S,60.9E,132,49,"3, FM4, B4",index entry: Langrenus
+86,Prinz Rilles,Rille system near the crater Prinz,27.0N,43.0W,46,19,21,
+87,Humboldt,Crater with central peaks & dark spots,27.0S,80.9E,207,60,"4, L3",
+88,Peary,Difficult-to-observe polar crater,88.6N,33.0E,74,"4, II",L8,
+89,Valentine Dome,Volcanic dome,30.5N,10.1E,30,13,11,
+90,"Armstrong, Aldrin & Collins",Small craters near the Apollo 11 landing site,1.3N,23.7E,3,35,"7, LS1","Armstrong / Aldrin / Collins all ch.7, LS1"
+91,De Gasparis Rilles,Area with many rilles,25.9S,50.7W,30,51,25,
+92,Gylden Valley,Part of the Imbrium radial sculpture,5.1S,0.7E,47,44,12*,best-guess: crater Gyldén = ch.12; the valley is not separately indexed
+93,Dionysius rays,Unusual & rare dark rays,2.8N,17.3E,18,35,12,index entry: Dionysius dark rays
+94,Drygalski,Large south-pole region crater,79.3S,84.9W,162,"72, VI","14, 15",
+95,Procellarum basin,The Moon's biggest basin?,23.0N,15.0W,3200,—,"21, 22, 26, 27, B9",index entry: Oceanus Procellarum
+96,Leibnitz Mountains,Rim of South Pole-Aitken basin,85.0S,30.0E,—,"73, V","15, L4*","best-guess: South Pole–Aitken basin rim; not separately indexed (SPA basin index: B10, F3, F4)"
+97,Inghirami Valley,Orientale basin ejecta,44.0S,73.0W,140,61,L5,index entry: Inghirami Valley
+98,Imbrium lava flows,Mare lava-flow boundaries,32.8N,22.0W,—,10,"18, 19, 21",index entry: lava flows
+99,Ina,D-shaped young volcanic caldera,18.6N,5.3E,3,22,11*,best-guess: Lacus Felicitatis = ch.11; Ina not separately indexed
+100,Mare Marginis swirls,Possible magnetic field deposits,18.5N,88.0E,—,"27, III","2, B1","index entry: Mare Marginis; the generic 'swirls' index entry points to L2, F3"
