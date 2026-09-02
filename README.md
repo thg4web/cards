@@ -24,8 +24,10 @@ data/lunar100.js           the 100-feature spine, from ../loop/
 data/cards.js              authored per-card content (merged onto the spine by id)
 data/moon-atlas-db.csv     Rükl / 21st-Century atlas cross-reference
 design/mockup-copernicus.html   the approved look (L 5 · Copernicus, front + back)
-design/plates/             source imagery + processed plates + SOURCES.md
-scripts/                   build scripts (card render, deck imposition) — TBD
+design/plates/             processed plates (plate-L*-{scene,photo}.jpg) + SOURCES.md
+                           src-* originals and .trekcache/ are git-ignored
+tools/                     build-moonbase.sh · build-locator-plates.py ·
+                           build-closeup-plates.py · fill-prose-21-100.py
 cards/                     generated card / deck PDFs (git-ignored)
 ```
 
@@ -37,9 +39,14 @@ cards/                     generated card / deck PDFs (git-ignored)
 
 ## Status
 
-Template stage (2026-09-01). Scaffold, data schema, and the data-driven render
-template are done; `data/cards.js` has L5 Copernicus authored in full and the
-other 99 stubbed. Next: per-card content, then the print proof.
+Content draft (2026-09-02). Scaffold, data schema, and the data-driven renderer
+are done. **All 100 cards are `status:"draft"`** — full prose (epoch, size,
+best days, description, name origin, facts, tips) and per-card difficulty.
+Imagery is in: left locator panels for L9 + L16–L100 are crops of one Virtual
+Moon Atlas base map with the feature ringed; right close-ups for L16–L100 come
+from the LRO LROC WAC global mosaic; L1–L15 keep bespoke panels.
+Open: an accuracy / ephemeris review of the prose, a polar-projection source for
+3 polar close-ups and 11 rough limb locators, then the print proof.
 See `Project/docs/design-brief.md` and `Project/docs/card-data-schema.md`.
 
 ## Licence

@@ -107,22 +107,36 @@
 .lfc-pane canvas,.lfc-pane .plate{position:absolute;inset:0;width:100%;height:100%;display:block}
 .lfc-pane .plate{object-fit:cover}
 
-.lfc-locator .lbl{position:absolute;font-family:var(--lfc-cond);text-transform:uppercase;font-weight:500;
+/* on a ringed locator map the plate is context, not the subject: dim it so the
+   ring and the text furniture read against it (concept cards L1-L3 have no ring
+   and keep their scene at full brightness) */
+.lfc-locator:has(svg.outline) .plate{filter:brightness(.5) saturate(.78) contrast(1.02)}
+.lfc-locator:has(svg.outline)::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:radial-gradient(120% 90% at 50% 45%,rgba(6,5,4,0) 38%,rgba(6,5,4,.6) 100%)}
+.lfc-locator .lbl,.lfc-locator .pin,.lfc-locator svg.outline,
+.lfc-locator .lfc-coords,.lfc-locator .lfc-map-credit,.lfc-locator .lfc-globe{z-index:2}
+
+.lfc-locator .lbl{position:absolute;font-family:var(--lfc-cond);text-transform:uppercase;font-weight:600;
   font-size:1.35cqw;letter-spacing:.05em;color:#e9e4da;white-space:nowrap;
-  text-shadow:0 1px 3px #000,0 0 6px #000}
+  background:rgba(8,6,4,.62);padding:.12cqw .5cqw;border-radius:2px;
+  text-shadow:0 1px 2px #000}
 .lfc-locator .lbl.o{color:var(--lfc-accent)}
 .lfc-locator .pin{position:absolute;width:0;height:0;border-left:.7cqw solid transparent;
   border-right:.7cqw solid transparent;border-bottom:1.1cqw solid var(--lfc-accent);
   filter:drop-shadow(0 1px 2px #000)}
 .lfc-locator svg.outline{position:absolute;inset:0;width:100%;height:100%}
 
-.lfc-coords{position:absolute;left:0;bottom:0;background:var(--lfc-accent);color:#160b03;
+.lfc-coords{position:absolute;left:0;bottom:0;background:rgba(8,6,4,.84);color:var(--lfc-accent);
+  border-top:2px solid var(--lfc-accent);
   font-family:var(--lfc-cond);font-weight:700;font-size:1.45cqw;letter-spacing:.05em;
   text-transform:uppercase;padding:.7cqw 1.2cqw .55cqw}
-.lfc-map-credit{position:absolute;right:1cqw;top:1cqw;font-family:var(--lfc-cond);text-transform:uppercase;
-  letter-spacing:.1em;font-size:1.05cqw;color:rgba(255,255,255,.72);text-shadow:0 1px 3px #000}
+.lfc-map-credit{position:absolute;right:1cqw;top:1cqw;max-width:64%;text-align:right;
+  font-family:var(--lfc-cond);text-transform:uppercase;
+  letter-spacing:.1em;font-size:1.05cqw;color:rgba(255,255,255,.82);
+  background:rgba(8,6,4,.62);padding:.35cqw .7cqw;border-radius:2px}
 .lfc-globe{position:absolute;right:1.1cqw;bottom:1.1cqw;width:7.4cqw;height:7.4cqw;border-radius:50%;
-  overflow:hidden;box-shadow:0 0 0 1px var(--lfc-accent),0 0 0 3px rgba(0,0,0,.5)}
+  overflow:hidden;box-shadow:0 0 0 1px var(--lfc-accent),0 0 0 3px rgba(0,0,0,.6);
+  background:radial-gradient(circle at 38% 34%,#6f6d68,#3a3935 62%,#1c1b19)}
 .lfc-globe .mk{position:absolute;width:1.4cqw;height:1.4cqw;border:1px solid var(--lfc-accent);
   border-radius:50%;box-shadow:0 0 4px var(--lfc-accent)}
 .lfc-globe .mk::after{content:"";position:absolute;inset:.42cqw;border-radius:50%;background:var(--lfc-accent)}
