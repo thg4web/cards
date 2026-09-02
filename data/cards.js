@@ -87,7 +87,7 @@ const CARDS = [
       "Apollo 15 set down at Hadley, at the base of the range, in 1971.",
       "At sunrise the peaks light as bright points beyond the terminator while the plain below is still dark."
     ],
-    tips:"Best a day after first quarter, when a low sun throws the range’s shadow west across Mare Imbrium and the tallest peaks catch light past the terminator." },
+    tips:"Best a day after first quarter, when a low sun throws the range’s shadow west across Mare Imbrium and the tallest peaks catch light past the terminator. A repeat view comes just after last quarter." },
   { id:"L5",   zone:"WI", cat:"crater",  alt:"",                    dSeed:1, status:"draft",
     epoch:"Copernican",
     size:[{ label:"Diameter", value:"93 km (58 mi)" }],
@@ -116,7 +116,7 @@ const CARDS = [
       "The ray system reaches more than 800 km; the rays are young unweathered ejecta, marking the crater at roughly 800 million years old.",
       "The Copernican period, the Moon’s most recent geologic era, is named after this one crater."
     ],
-    tips:"A small scope a night or two after first quarter shows the terraced rim and central peaks in raking light; near full Moon the crater flattens but its splash of rays becomes the brightest feature on that side." },
+    tips:"Easy in binoculars as a bright spot in the Moon’s western half. A small scope a night or two after first quarter shows the terraced rim and central peaks in raking light; near full Moon the crater flattens but its splash of rays becomes the brightest feature on that side." },
   { id:"L6", zone:"WI", cat:"crater", alt:"", dSeed:1, diff:1, status:"draft",
     epoch:"Copernican (~108 Ma)",
     size:[{ label:"Diameter", value:"85 km (53 mi)" }],
@@ -174,7 +174,7 @@ const CARDS = [
       "Theophilus is about 4.4 km deep, with a central massif rising some 1.4 km.",
       "The trio frames the north end of Mare Nectaris, with the Altai Scarp curving away beyond."
     ],
-    tips:"Five to six days after new Moon the low sun rakes all three at once: Theophilus sharp and shadowed, Catharina barely a dimple." },
+    tips:"Five to six days after new Moon the low sun rakes all three at once: Theophilus sharp and shadowed, Catharina barely a dimple. A second chance comes a day or two after last quarter." },
 
   { id:"L9", zone:"WI", cat:"crater", alt:"", dSeed:1, diff:1, status:"draft",
     epoch:"Nectarian",
@@ -271,7 +271,7 @@ const CARDS = [
       "Its south wall is so reduced by Mare Humorum lava that the crater is nearly open to the sea on that side.",
       "How many of the floor rilles you can trace is a fair measure of your aperture and the night's seeing."
     ],
-    tips:"Best a day or two after first quarter and again after last quarter, when low light rakes the floor. A 100 mm scope shows the broken south wall and Gassendi A." },
+    tips:"Best a day or two after first quarter and again after last quarter, when low light rakes the floor. A 100 mm scope shows the broken south wall and Gassendi A; 150 mm and up starts to show the rille network." },
   { id:"L14", zone:"WI", cat:"crater", alt:"", dSeed:1, diff:1, status:"draft",
     epoch:"Upper Imbrian",
     size:[{ label:"Diameter", value:"~260 km (160 mi)" }, { label:"Jura rim", value:"up to 4 km (13,000 ft)" }],
@@ -307,7 +307,7 @@ const CARDS = [
       "It marks the western rim of a buried crater about 190 km across, whose outline shows as low ridges in the mare.",
       "Near last quarter the sun lights the scarp face and it reverses, showing as a bright line instead of a dark one."
     ],
-    tips:"Day 8, a day after first quarter, for the black shadow line; day 23 or 24 for the bright version. A 60 mm scope shows it." },
+    tips:"Day 8, a day after first quarter, for the black shadow line; day 23 or 24 for the bright version. A 60 mm scope shows it; more aperture adds Birt, Rima Birt and the Stag's-Horn ridges." },
   { id:"L16", zone:"EL", cat:"crater", alt:"", dSeed:1, diff:2, status:"draft",
     epoch:"Nectarian",
     size:[{ label:"Diameter", value:"177 km (110 mi)" }, { label:"Central peak", value:"~1.7 km (5,600 ft)" }],
@@ -326,7 +326,7 @@ const CARDS = [
       "Petavius heads a group with Wrottesley on its rim and Palitzsch and its long valley alongside to the southeast.",
       "Sitting near 60 degrees east, it shows much more of itself at favourable libration than at poor."
     ],
-    tips:"Catch it two to four days after new Moon, or just after full, when the terminator is near and the floor rille casts shadow. A 100 mm scope shows the rille and central peaks." },
+    tips:"Catch it two to four days after new Moon, or just after full, when the terminator is near and the floor rille casts shadow. A 100 mm scope shows the rille and central peaks; the view flattens fast as the sun climbs over it." },
   { id:"L17", zone:"WL", cat:"valley", alt:"Vallis Schröteri", dSeed:1, diff:2, status:"draft",
     epoch:"Imbrian (volcanic)",
     size:[{ label:"Length", value:"~160 km (100 mi)" }, { label:"Width", value:"up to 10 km (6 mi)" }],
