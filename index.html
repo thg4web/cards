@@ -197,8 +197,8 @@
   var DIFF_STOPS = ["#3a5a3a","#455a3a","#50623a","#5b653a","#66693a",
                     "#6d6639","#705b36","#735034","#774531","#7a3a2f"];
   var ZONES = [
-    ["ER","Eastern Rim","#6d8299"], ["EH","Eastern Heartland","#6a9068"],
-    ["WH","Western Heartland","#d08b7f"], ["WR","Western Rim","#e9d88f"]
+    ["EL","Eastern Limb","#6d8299"], ["EI","Eastern Interior","#6a9068"],
+    ["WI","Western Interior","#d08b7f"], ["WL","Western Limb","#e9d88f"]
   ];
   // seven observable phases across the ~29.5-day lunation (age in days) —
   // New is dropped (nothing to see); the waxing-crescent pill absorbs those
@@ -230,7 +230,7 @@
 
   function range(a, b) { var r = []; for (var i = a; i < b; i++) r.push(i); return r; }
 
-  var ZONE_IDX = { ER:[], EH:[], WH:[], WR:[] };
+  var ZONE_IDX = { EL:[], EI:[], WI:[], WL:[] };
   var PHASE_IDX = {};
   PHASES.forEach(function (p) { PHASE_IDX[p.n] = []; });
   IDS.forEach(function (id, i) {

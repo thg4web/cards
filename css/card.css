@@ -17,11 +17,11 @@
   --lfc-line:rgba(237,233,227,.16);
   --lfc-line-strong:rgba(237,233,227,.34);
 
-  /* four lunar zones (colour-coded, from the reference deck) */
-  --lfc-zone-er:#6d8299;   /* Eastern Rim — steel blue */
-  --lfc-zone-eh:#6a9068;   /* Eastern Heartland — forest green */
-  --lfc-zone-wh:#d08b7f;   /* Western Heartland — light red */
-  --lfc-zone-wr:#e9d88f;   /* Western Rim — light yellow */
+  /* four lunar zones (colour-coded) */
+  --lfc-zone-el:#6d8299;   /* Eastern Limb — steel blue */
+  --lfc-zone-ei:#6a9068;   /* Eastern Interior — forest green */
+  --lfc-zone-wi:#d08b7f;   /* Western Interior — light red */
+  --lfc-zone-wl:#e9d88f;   /* Western Limb — light yellow */
 
   /* seven feature categories */
   --lfc-cat-maria:#5f6f82;
@@ -39,7 +39,7 @@
 
 /* ---------- card shell ---------- */
 .lfc-card{
-  --zone:var(--lfc-zone-wh);
+  --zone:var(--lfc-zone-wi);
   --cat:var(--lfc-cat-crater);
   container-type:inline-size;
   position:relative;
@@ -194,10 +194,10 @@
   background:var(--lfc-accent);transform:rotate(45deg)}
 
 /* ---------- zone / category helper classes ---------- */
-.lfc-card.zone-er{--zone:var(--lfc-zone-er)}
-.lfc-card.zone-eh{--zone:var(--lfc-zone-eh)}
-.lfc-card.zone-wh{--zone:var(--lfc-zone-wh)}
-.lfc-card.zone-wr{--zone:var(--lfc-zone-wr)}
+.lfc-card.zone-el{--zone:var(--lfc-zone-el)}
+.lfc-card.zone-ei{--zone:var(--lfc-zone-ei)}
+.lfc-card.zone-wi{--zone:var(--lfc-zone-wi)}
+.lfc-card.zone-wl{--zone:var(--lfc-zone-wl)}
 .lfc-card.cat-maria{--cat:var(--lfc-cat-maria)}
 .lfc-card.cat-crater{--cat:var(--lfc-cat-crater)}
 .lfc-card.cat-valley{--cat:var(--lfc-cat-valley)}
