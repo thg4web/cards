@@ -5,7 +5,7 @@
 //
 // Full record -- see Project/docs/card-data-schema.md:
 //   id       "L5"                        spine key
-//   zone     "ER"|"EH"|"WH"|"WR"|""      lunar zone tab            (schema section 3)
+//   zone     "EL"|"EI"|"WI"|"WL"|""      lunar zone tab            (schema section 3)
 //   cat      maria|crater|valley|special|ridge|mtn|volc            (schema section 4)
 //   alt      "Rupes Recta"               header alt/Latin name, "" if none
 //   dSeed    1..5                        first-pass difficulty     (schema section 5)
@@ -70,7 +70,7 @@ const CARDS = [
     ],
     tips:"Naked eye at full Moon, the “Man in the Moon” is just the pattern of near-side maria. Any binocular shows the sharp jump in brightness and texture where a mare meets a highland shore." },
 
-  { id:"L4", zone:"WH", cat:"mtn", alt:"Montes Apenninus", dSeed:1, diff:1, status:"draft",
+  { id:"L4", zone:"WI", cat:"mtn", alt:"Montes Apenninus", dSeed:1, diff:1, status:"draft",
     epoch:"Lower Imbrian (Imbrium impact, ~3.9 Ga)",
     size:[{ label:"Length", value:"~600 km (370 mi)" }, { label:"Rise", value:"up to 5 km (16,000 ft)" }],
     bestDays:[[7,9],[22,24]],
@@ -88,7 +88,7 @@ const CARDS = [
       "At sunrise the peaks light as bright points beyond the terminator while the plain below is still dark."
     ],
     tips:"Best a day after first quarter, when a low sun throws the range’s shadow west across Mare Imbrium and the tallest peaks catch light past the terminator. A repeat view comes just after last quarter." },
-  { id:"L5",   zone:"WH", cat:"crater",  alt:"",                    dSeed:1, status:"draft",
+  { id:"L5",   zone:"WI", cat:"crater",  alt:"",                    dSeed:1, status:"draft",
     epoch:"Copernican",
     size:[{ label:"Diameter", value:"93 km (58 mi)" }],
     depth:"~3.8 km (12,500 ft)",
@@ -117,7 +117,7 @@ const CARDS = [
       "The Copernican period, the Moon’s most recent geologic era, is named after this one crater."
     ],
     tips:"Easy in binoculars as a bright spot in the Moon’s western half. A small scope a night or two after first quarter shows the terraced rim and central peaks in raking light; near full Moon the crater flattens but its splash of rays becomes the brightest feature on that side." },
-  { id:"L6", zone:"WH", cat:"crater", alt:"", dSeed:1, diff:1, status:"draft",
+  { id:"L6", zone:"WI", cat:"crater", alt:"", dSeed:1, diff:1, status:"draft",
     epoch:"Copernican (~108 Ma)",
     size:[{ label:"Diameter", value:"85 km (53 mi)" }],
     depth:"~4.8 km (15,700 ft)",
@@ -136,7 +136,7 @@ const CARDS = [
     ],
     tips:"Near first or last quarter a small scope shows the terraces and central peak in relief. Near full Moon drop the power instead: the rays leap out and Tycho becomes the hub of the brightest ray system on the Moon." },
 
-  { id:"L7", zone:"EH", cat:"ridge", alt:"Rupes Altai", dSeed:1, diff:1, status:"draft",
+  { id:"L7", zone:"EI", cat:"ridge", alt:"Rupes Altai", dSeed:1, diff:1, status:"draft",
     epoch:"Nectarian (Nectaris basin rim)",
     size:[{ label:"Length", value:"~425 km (264 mi)" }, { label:"Scarp face", value:"up to ~1 km" }],
     bestDays:[[5,7],[20,22]],
@@ -158,7 +158,7 @@ const CARDS = [
     ],
     tips:"Catch it four to six days after new Moon, or just after last quarter, when the low sun casts its shadow and the cliff face lights as a bright curved line. Near full Moon it is hard to find." },
 
-  { id:"L8", zone:"EH", cat:"crater", alt:"", dSeed:1, diff:1, status:"draft",
+  { id:"L8", zone:"EI", cat:"crater", alt:"", dSeed:1, diff:1, status:"draft",
     epoch:"Eratosthenian to pre-Nectarian (young to old)",
     size:[{ label:"Chain span", value:"~300 km (185 mi)" }, { label:"Each", value:"Theophilus 100 · Cyrillus 98 · Catharina 100 km" }],
     bestDays:[[5,7],[20,22]],
@@ -176,7 +176,7 @@ const CARDS = [
     ],
     tips:"Five to six days after new Moon the low sun rakes all three at once: Theophilus sharp and shadowed, Catharina barely a dimple. A second chance comes a day or two after last quarter." },
 
-  { id:"L9", zone:"WH", cat:"crater", alt:"", dSeed:1, diff:1, status:"draft",
+  { id:"L9", zone:"WI", cat:"crater", alt:"", dSeed:1, diff:1, status:"draft",
     epoch:"Nectarian",
     size:[{ label:"Diameter", value:"225 km (140 mi)" }],
     depth:"~3.5 km (11,500 ft)",
@@ -196,7 +196,7 @@ const CARDS = [
     ],
     tips:"Around first quarter plus a day the floor is half in shadow and the crater chain stands out in relief. Push the magnification and count the pits along the arc. Also visible just after last quarter." },
 
-  { id:"L10", zone:"ER", cat:"maria", alt:"", dSeed:1, diff:1, status:"draft",
+  { id:"L10", zone:"EL", cat:"maria", alt:"", dSeed:1, diff:1, status:"draft",
     epoch:"Basin Nectarian; mare fill Late Imbrian",
     size:[{ label:"Span", value:"540 × 620 km (335 × 385 mi)" }],
     bestDays:[[2,4],[17,19]],
@@ -214,7 +214,7 @@ const CARDS = [
       "Its surface sits low enough that the buried-basin mascon gives one of the strongest gravity highs on the Moon."
     ],
     tips:"Two to four days after new Moon it is the first big dark plain to clear the terminator, low sun catching its ridges. Watch how much its shape and limb gap shift month to month with libration." },
-  { id:"L11", zone:"WR", cat:"crater", alt:"", dSeed:1, diff:1, status:"draft",
+  { id:"L11", zone:"WL", cat:"crater", alt:"", dSeed:1, diff:1, status:"draft",
     epoch:"Copernican",
     size:[{ label:"Diameter", value:"40 km (25 mi)" }],
     depth:"~3.7 km (12,100 ft)",
@@ -233,7 +233,7 @@ const CARDS = [
       "The crater is young enough, Copernican, that its rays are still bright and its walls have not slumped."
     ],
     tips:"Findable in binoculars as a brilliant spot northwest of centre. A telescope at day 11 to 13 shows the dark wall bands and the terraced interior. One of the few features worth a look near full Moon, when it simply blazes." },
-  { id:"L12", zone:"ER", cat:"crater", alt:"", dSeed:1, diff:1, status:"draft",
+  { id:"L12", zone:"EL", cat:"crater", alt:"", dSeed:1, diff:1, status:"draft",
     epoch:"Copernican",
     size:[{ label:"Diameter", value:"28 km (17 mi)" }],
     depth:"~2.4 km (7,900 ft)",
@@ -252,7 +252,7 @@ const CARDS = [
       "At about 28 km across it is, area for area, one of the brightest spots on the Moon, close behind Aristarchus."
     ],
     tips:"Look on the west shore of Mare Crisium from day 4 or 5. The lopsided rays read best under a high sun near full Moon; the deep bright bowl shows whenever the crater is lit." },
-  { id:"L13", zone:"WH", cat:"crater", alt:"", dSeed:1, diff:2, status:"draft",
+  { id:"L13", zone:"WI", cat:"crater", alt:"", dSeed:1, diff:2, status:"draft",
     epoch:"Nectarian",
     size:[{ label:"Diameter", value:"110 km (68 mi)" }],
     depth:"~1.9 km (6,200 ft); the floor stands well above the mare",
@@ -272,7 +272,7 @@ const CARDS = [
       "How many of the floor rilles you can trace is a fair measure of your aperture and the night's seeing."
     ],
     tips:"Best a day or two after first quarter and again after last quarter, when low light rakes the floor. A 100 mm scope shows the broken south wall and Gassendi A; 150 mm and up starts to show the rille network." },
-  { id:"L14", zone:"WH", cat:"crater", alt:"", dSeed:1, diff:1, status:"draft",
+  { id:"L14", zone:"WI", cat:"crater", alt:"", dSeed:1, diff:1, status:"draft",
     epoch:"Upper Imbrian",
     size:[{ label:"Diameter", value:"~260 km (160 mi)" }, { label:"Jura rim", value:"up to 4 km (13,000 ft)" }],
     bestDays:[[10,12],[25,27]],
@@ -290,7 +290,7 @@ const CARDS = [
       "China's Chang'e 3 lander and Yutu rover set down just east of the bay, in Mare Imbrium, in 2013."
     ],
     tips:"Watch around day 10, a day or two after first quarter, for the lit Jura arc standing out of the shadowed floor. Binoculars catch the handle; a telescope shows the two bright capes at its ends." },
-  { id:"L15", zone:"WH", cat:"ridge", alt:"Rupes Recta", dSeed:1, diff:2, status:"draft",
+  { id:"L15", zone:"WI", cat:"ridge", alt:"Rupes Recta", dSeed:1, diff:2, status:"draft",
     epoch:"The fault cuts Imbrian-age mare basalt and formed later.",
     size:[{ label:"Length", value:"~110 km (68 mi)" }, { label:"Scarp face", value:"~240 to 300 m (800 to 1,000 ft)" }],
     bestDays:[[8,10],[23,25]],
@@ -308,7 +308,7 @@ const CARDS = [
       "Near last quarter the sun lights the scarp face and it reverses, showing as a bright line instead of a dark one."
     ],
     tips:"Day 8, a day after first quarter, for the black shadow line; day 23 or 24 for the bright version. A 60 mm scope shows it; more aperture adds Birt, Rima Birt and the Stag's-Horn ridges." },
-  { id:"L16", zone:"ER", cat:"crater", alt:"", dSeed:1, diff:2, status:"draft",
+  { id:"L16", zone:"EL", cat:"crater", alt:"", dSeed:1, diff:2, status:"draft",
     epoch:"Nectarian",
     size:[{ label:"Diameter", value:"177 km (110 mi)" }, { label:"Central peak", value:"~1.7 km (5,600 ft)" }],
     depth:"~3.3 km (10,800 ft)",
@@ -327,7 +327,7 @@ const CARDS = [
       "Sitting near 60 degrees east, it shows much more of itself at favourable libration than at poor."
     ],
     tips:"Catch it two to four days after new Moon, or just after full, when the terminator is near and the floor rille casts shadow. A 100 mm scope shows the rille and central peaks; the view flattens fast as the sun climbs over it." },
-  { id:"L17", zone:"WR", cat:"valley", alt:"Vallis Schröteri", dSeed:1, diff:2, status:"draft",
+  { id:"L17", zone:"WL", cat:"valley", alt:"Vallis Schröteri", dSeed:1, diff:2, status:"draft",
     epoch:"Imbrian (volcanic)",
     size:[{ label:"Length", value:"~160 km (100 mi)" }, { label:"Width", value:"up to 10 km (6 mi)" }],
     depth:"~1 km (3,300 ft)",
@@ -346,7 +346,7 @@ const CARDS = [
       "A narrow inner channel threads the valley floor, a rille within the rille, and takes real aperture to see."
     ],
     tips:"Best day 11 to 13, well after first quarter, with the plateau in raking light. A 100 mm scope shows the broad valley and the Cobra's Head; 200 mm brings out the inner channel." },
-  { id:"L18", zone:"EH", cat:"maria", alt:"", dSeed:1, diff:1, status:"draft",
+  { id:"L18", zone:"EI", cat:"maria", alt:"", dSeed:1, diff:1, status:"draft",
     epoch:"Imbrian basalt fill; the basin is Nectarian",
     size:[{ label:"Basin diameter", value:"~707 km (440 mi)" }],
     bestDays:[[5,7],[20,22]],
@@ -364,7 +364,7 @@ const CARDS = [
       "The colour split is subtle to the eye but obvious in a stretched photograph or with a colour-boosting filter."
     ],
     tips:"Any time Serenitatis is fully lit, from about day 6. Look for the tonal ring inside the shore and the dark patch near Sulpicius Gallus. Binoculars show it; a low-power eyepiece and a steady night help." },
-  { id:"L19", zone:"EH", cat:"valley", alt:"Vallis Alpes", dSeed:1, diff:2, status:"draft",
+  { id:"L19", zone:"EI", cat:"valley", alt:"Vallis Alpes", dSeed:1, diff:2, status:"draft",
     epoch:"Imbrian",
     size:[{ label:"Length", value:"~166 km (103 mi)" }, { label:"Width", value:"7 to 10 km (4 to 6 mi)" }],
     bestDays:[[7,9],[22,24]],
@@ -382,7 +382,7 @@ const CARDS = [
       "It works as a pointer: follow it southwest and it aims back toward the crater Plato."
     ],
     tips:"Day 7 to 9 shows the valley walls in shadow relief. The floor rille needs 150 mm or more, high magnification and steady air; many observers chase it for years before a clean sighting." },
-  { id:"L20", zone:"EH", cat:"crater", alt:"", dSeed:1, diff:2, status:"draft",
+  { id:"L20", zone:"EI", cat:"crater", alt:"", dSeed:1, diff:2, status:"draft",
     epoch:"Upper Imbrian",
     size:[{ label:"Diameter", value:"95 km (59 mi)" }],
     depth:"~2.3 km (7,500 ft); the floor sits near mare level",
@@ -401,7 +401,7 @@ const CARDS = [
       "Rima Posidonius hugs the inside of the north and east walls and shows in a 100 mm scope under low sun."
     ],
     tips:"Day 4 to 6, a few days before first quarter, or after last quarter. Low power sets it against the dark mare; higher power shows the inner ring, the floor hills and, on a good night, the wall rille." },
-  { id:"L21", zone:"EH", cat:"crater", alt:"", dSeed:2, diff:2, status:"draft",
+  { id:"L21", zone:"EI", cat:"crater", alt:"", dSeed:2, diff:2, status:"draft",
     epoch:"Nectarian",
     size:[{ label:"Diameter", value:"124 km (77 mi)" }],
     depth:"shallow, ~1.5 km; the floor sits near mare level",
@@ -420,7 +420,7 @@ const CARDS = [
       "A fine rille and a scatter of low hills cross the flooded floor."
     ],
     tips:"Day 5, with Mare Nectaris on the terminator. A 100 mm scope shows the open north side and the main floor cracks; 150 mm adds the domes." },
-  { id:"L22", zone:"WR", cat:"volc", alt:"", dSeed:2, diff:2, status:"draft",
+  { id:"L22", zone:"WL", cat:"volc", alt:"", dSeed:2, diff:2, status:"draft",
     epoch:"Imbrian volcanism",
     size:[{ label:"Extent", value:"~200 x 150 km" }],
     bestDays:[[11,13],[26,27]],
@@ -438,7 +438,7 @@ const CARDS = [
       "Orbiters have detected radon gas leaking from the plateau, a sign it is not entirely dead."
     ],
     tips:"Day 11 to 13, western Procellarum on the terminator. Binoculars show the bright wedge of the plateau; a telescope adds Herodotus, the Cobra's Head and the rille field." },
-  { id:"L23", zone:"WH", cat:"mtn", alt:"Mons Pico", dSeed:2, diff:2, status:"draft",
+  { id:"L23", zone:"WI", cat:"mtn", alt:"Mons Pico", dSeed:2, diff:2, status:"draft",
     epoch:"Imbrian (basin ring)",
     size:[{ label:"Height", value:"~2.4 km (7,900 ft)" }, { label:"Base", value:"~25 km (16 mi)" }],
     bestDays:[[8,10],[23,25]],
@@ -456,7 +456,7 @@ const CARDS = [
       "Despite the sharp look, its slopes are shallow, a rubble heap rather than a peak."
     ],
     tips:"Day 9, when the shadow is longest. Almost any scope shows the bright speck and its dark spire on the mare." },
-  { id:"L24", zone:"EH", cat:"valley", alt:"Rima Hyginus", dSeed:2, diff:2, status:"draft",
+  { id:"L24", zone:"EI", cat:"valley", alt:"Rima Hyginus", dSeed:2, diff:2, status:"draft",
     epoch:"Imbrian",
     size:[{ label:"Length", value:"~220 km (137 mi)" }],
     bestDays:[[6,8],[21,23]],
@@ -474,7 +474,7 @@ const CARDS = [
       "It sits in a showcase strip of rilles with the Ariadaeus and Triesnecker systems nearby."
     ],
     tips:"Day 7, near first quarter, with the central highlands on the terminator. An 80 mm scope shows the rille and the kink at Hyginus; 150 mm resolves the pit chain." },
-  { id:"L25", zone:"ER", cat:"crater", alt:"", dSeed:2, diff:2, status:"draft",
+  { id:"L25", zone:"EL", cat:"crater", alt:"", dSeed:2, diff:2, status:"draft",
     epoch:"Copernican",
     size:[{ label:"Each", value:"~9 x 11 km (6 x 7 mi)" }],
     bestDays:[[3,5],[18,20]],
@@ -492,7 +492,7 @@ const CARDS = [
       "Their rays cross the dark mare and lighten it, making the comet shape easy to trace."
     ],
     tips:"Day 4 or 5 in Mare Fecunditatis. An 80 mm scope splits the two craters; the double western rays show better under higher sun toward full Moon." },
-  { id:"L26", zone:"EH", cat:"maria", alt:"", dSeed:2, diff:1, status:"draft",
+  { id:"L26", zone:"EI", cat:"maria", alt:"", dSeed:2, diff:1, status:"draft",
     epoch:"Imbrian fill",
     size:[{ label:"Length", value:"~1,600 km (990 mi)" }],
     bestDays:[[7,9],[22,24]],
@@ -510,7 +510,7 @@ const CARDS = [
       "The crater Plato sits on its southern shore and makes a ready landmark."
     ],
     tips:"Any time the northern limb is lit. Sweep along the top of the Moon with low power; the ribbon of grey against the highlands is unmistakable." },
-  { id:"L27", zone:"WH", cat:"crater", alt:"", dSeed:2, diff:1, status:"draft",
+  { id:"L27", zone:"WI", cat:"crater", alt:"", dSeed:2, diff:1, status:"draft",
     epoch:"Upper Imbrian, later flooded",
     size:[{ label:"Diameter", value:"83 km (52 mi)" }],
     depth:"~2.1 km (6,900 ft)",
@@ -529,7 +529,7 @@ const CARDS = [
       "With Aristillus and Autolycus it forms a distinctive triangle of craters on the plain."
     ],
     tips:"Day 8, near first quarter. The flat floor against the shadowed walls is striking, and a low sun brings out faint ridges on the fill." },
-  { id:"L28", zone:"EH", cat:"crater", alt:"", dSeed:2, diff:2, status:"draft",
+  { id:"L28", zone:"EI", cat:"crater", alt:"", dSeed:2, diff:2, status:"draft",
     epoch:"pre-Nectarian",
     size:[{ label:"Diameter", value:"~150 km (93 mi)" }],
     bestDays:[[7,9],[22,24]],
@@ -547,7 +547,7 @@ const CARDS = [
       "With its neighbour Albategnius it makes a classic first-quarter pairing."
     ],
     tips:"Day 7 or 8 only. Under a low sun the ghostly rim stands out; a few days later the crater is hard to find at all." },
-  { id:"L29", zone:"EH", cat:"valley", alt:"Rima Ariadaeus", dSeed:2, diff:1, status:"draft",
+  { id:"L29", zone:"EI", cat:"valley", alt:"Rima Ariadaeus", dSeed:2, diff:1, status:"draft",
     epoch:"Imbrian",
     size:[{ label:"Length", value:"~250 km (155 mi)" }],
     bestDays:[[6,8],[21,23]],
@@ -565,7 +565,7 @@ const CARDS = [
       "It is one of the easiest rilles on the Moon, within reach of a 60 mm scope."
     ],
     tips:"Day 6 or 7, near first quarter. A small scope shows it as a fine straight line reaching out of the highlands into the mare." },
-  { id:"L30", zone:"WH", cat:"crater", alt:"", dSeed:2, diff:3, status:"draft",
+  { id:"L30", zone:"WI", cat:"crater", alt:"", dSeed:2, diff:3, status:"draft",
     epoch:"Nectarian",
     size:[{ label:"Length", value:"~180 km (112 mi)" }, { label:"Width", value:"~70 km (43 mi)" }],
     bestDays:[[10,12],[25,27]],
@@ -583,7 +583,7 @@ const CARDS = [
       "It lies near the buried Schiller-Zucchius basin in the crowded southwest."
     ],
     tips:"Day 10 to 12 in the southwest, when libration tips the region into view. Low power shows the odd shape, which is the whole point of the card." },
-  { id:"L31", zone:"ER", cat:"crater", alt:"", dSeed:2, diff:2, status:"draft",
+  { id:"L31", zone:"EL", cat:"crater", alt:"", dSeed:2, diff:2, status:"draft",
     epoch:"Eratosthenian",
     size:[{ label:"Diameter", value:"56 km (35 mi)" }],
     bestDays:[[3,5],[18,20]],
@@ -601,7 +601,7 @@ const CARDS = [
       "It is a compact, bright object that stands out against the darker mare."
     ],
     tips:"Day 4 or 5 in Mare Fecunditatis. A 100 mm scope under low light shows the central rise and the concentric rille around it." },
-  { id:"L32", zone:"EH", cat:"volc", alt:"", dSeed:2, diff:3, status:"draft",
+  { id:"L32", zone:"EI", cat:"volc", alt:"", dSeed:2, diff:3, status:"draft",
     epoch:"Imbrian volcanism",
     size:[{ label:"Field", value:"~26 km (16 mi) across" }],
     bestDays:[[5,7],[20,22]],
@@ -619,7 +619,7 @@ const CARDS = [
       "Summit craterlets on both mark the vents."
     ],
     tips:"Day 6, first quarter, with Tranquillitatis on the terminator. The domes show only when the sun is within a few degrees of rising on them; otherwise they disappear." },
-  { id:"L33", zone:"EH", cat:"ridge", alt:"Dorsa Smirnov", dSeed:2, diff:1, status:"draft",
+  { id:"L33", zone:"EI", cat:"ridge", alt:"Dorsa Smirnov", dSeed:2, diff:1, status:"draft",
     epoch:"post-dates the Imbrian mare fill",
     size:[{ label:"Length", value:"~150 km (93 mi)" }],
     bestDays:[[5,7],[20,22]],
@@ -637,7 +637,7 @@ const CARDS = [
       "Within two days of the terminator passing, it flattens almost to invisibility."
     ],
     tips:"Day 6, near first quarter. The ridge stands out sharply against the smooth mare; catch it before the sun climbs and erases it." },
-  { id:"L34", zone:"EH", cat:"crater", alt:"", dSeed:2, diff:2, status:"draft",
+  { id:"L34", zone:"EI", cat:"crater", alt:"", dSeed:2, diff:2, status:"draft",
     epoch:"Nectarian crater, Imbrian fill",
     size:[{ label:"Span", value:"~150 km (93 mi)" }],
     bestDays:[[5,7],[20,22]],
@@ -655,7 +655,7 @@ const CARDS = [
       "Straight sections of the surrounding wall give the plain its odd, boxy look."
     ],
     tips:"Day 6, northern near side. A 100 mm scope shows Burg and the main rille; low sun sharpens the straight walls." },
-  { id:"L35", zone:"EH", cat:"valley", alt:"Rimae Triesnecker", dSeed:2, diff:3, status:"draft",
+  { id:"L35", zone:"EI", cat:"valley", alt:"Rimae Triesnecker", dSeed:2, diff:3, status:"draft",
     epoch:"Imbrian",
     size:[{ label:"Extent", value:"~215 km (134 mi)" }],
     bestDays:[[7,9],[22,24]],
@@ -673,7 +673,7 @@ const CARDS = [
       "The pattern is tighter and more tangled than a typical parallel graben set."
     ],
     tips:"Day 7 or 8, near first quarter, with the central meridian on the terminator. Steady air matters as much as aperture." },
-  { id:"L36", zone:"WR", cat:"maria", alt:"", dSeed:2, diff:2, status:"draft",
+  { id:"L36", zone:"WL", cat:"maria", alt:"", dSeed:2, diff:2, status:"draft",
     epoch:"pre-Nectarian basin",
     size:[{ label:"Diameter", value:"~430 km (267 mi)" }, { label:"Dark floor", value:"~220 km (137 mi)" }],
     bestDays:[[12,14],[27,27]],
@@ -691,7 +691,7 @@ const CARDS = [
       "Grimaldi also co-discovered the diffraction of light, unrelated to his lunar work but from the same restless mind."
     ],
     tips:"Day 13 or 14, or just after full Moon. The dark floor is obvious; the outer ring is subtle and shows best at favourable western libration." },
-  { id:"L37", zone:"WR", cat:"maria", alt:"", dSeed:2, diff:4, status:"draft",
+  { id:"L37", zone:"WL", cat:"maria", alt:"", dSeed:2, diff:4, status:"draft",
     epoch:"pre-Nectarian",
     size:[{ label:"Diameter", value:"~300 km (186 mi)" }],
     bestDays:[[13,15],[27,27]],
@@ -709,7 +709,7 @@ const CARDS = [
       "Foreshortening near the limb makes detail fleeting even on a good night."
     ],
     tips:"Day 13 to 15, deep in the southwest, only when southern libration is favourable. Low power shows the broken ring; expect a jumble, not a bowl." },
-  { id:"L38", zone:"EH", cat:"crater", alt:"", dSeed:2, diff:2, status:"draft",
+  { id:"L38", zone:"EI", cat:"crater", alt:"", dSeed:2, diff:2, status:"draft",
     epoch:"Imbrian",
     size:[{ label:"Each", value:"~30 km (19 mi)" }],
     bestDays:[[5,7],[20,22]],
@@ -727,7 +727,7 @@ const CARDS = [
       "The Apollo 11 landing point lies a short way southeast, on smooth mare with no crater to mark it."
     ],
     tips:"Day 6, first quarter. An 80 mm scope splits the pair; the low-relief floors show their fractures only under very low sun." },
-  { id:"L39", zone:"WR", cat:"crater", alt:"", dSeed:2, diff:3, status:"draft",
+  { id:"L39", zone:"WL", cat:"crater", alt:"", dSeed:2, diff:3, status:"draft",
     epoch:"Nectarian",
     size:[{ label:"Diameter", value:"~227 km (141 mi)" }],
     bestDays:[[11,13],[26,27]],
@@ -745,7 +745,7 @@ const CARDS = [
       "At about 230 km across it is one of the largest craters on the near side."
     ],
     tips:"Day 12 in the southwest, libration permitting. Low power shows the size and the banded floor, which is the feature's signature." },
-  { id:"L40", zone:"EH", cat:"valley", alt:"Rimae Janssen", dSeed:2, diff:3, status:"draft",
+  { id:"L40", zone:"EI", cat:"valley", alt:"Rimae Janssen", dSeed:2, diff:3, status:"draft",
     epoch:"Nectarian terrain, later faulting",
     size:[{ label:"Length", value:"~190 km (118 mi)" }],
     bestDays:[[4,6],[19,21]],
@@ -763,7 +763,7 @@ const CARDS = [
       "The sharp crater Fabricius cuts its northeastern floor and makes a good pointer to it."
     ],
     tips:"Day 5, deep southeast under a low sun. A 150 mm scope shows the rille as a wide shallow trough; good libration and seeing help." },
-  { id:"L41", zone:"EH", cat:"special", alt:"", dSeed:2, diff:2, status:"draft",
+  { id:"L41", zone:"EI", cat:"special", alt:"", dSeed:2, diff:2, status:"draft",
     epoch:"Copernican (ray)",
     size:[{ label:"Length", value:"~300 km (186 mi)" }],
     bestDays:[[5,7],[20,22]],
@@ -781,7 +781,7 @@ const CARDS = [
       "Like all rays it fades under low sun and brightens toward full Moon."
     ],
     tips:"High sun, day 9 onward toward full Moon. The ray is easy in binoculars once Serenitatis is well lit." },
-  { id:"L42", zone:"WR", cat:"volc", alt:"", dSeed:2, diff:3, status:"draft",
+  { id:"L42", zone:"WL", cat:"volc", alt:"", dSeed:2, diff:3, status:"draft",
     epoch:"Imbrian volcanism",
     size:[{ label:"Field", value:"~125 km (78 mi) across" }],
     bestDays:[[11,13],[26,27]],
@@ -799,7 +799,7 @@ const CARDS = [
       "The domes range from a few kilometres to over ten across."
     ],
     tips:"Day 11 to 13, western Procellarum on the terminator. A 150 mm scope at low sun shows the mottled, lumpy ground; the individual domes are subtle." },
-  { id:"L43", zone:"WR", cat:"crater", alt:"", dSeed:2, diff:3, status:"draft",
+  { id:"L43", zone:"WL", cat:"crater", alt:"", dSeed:2, diff:3, status:"draft",
     epoch:"Nectarian crater, Imbrian fill",
     size:[{ label:"Diameter", value:"84 km (52 mi)" }],
     bestDays:[[12,14],[27,27]],
@@ -817,7 +817,7 @@ const CARDS = [
       "Observers nickname it the cheese, or the thin cheese, for its flat raised disc."
     ],
     tips:"Day 12 or 13 in the southwest, at favourable libration. A low sun catches the rim so the whole table stands up from the terrain." },
-  { id:"L44", zone:"WR", cat:"crater", alt:"", dSeed:2, diff:3, status:"draft",
+  { id:"L44", zone:"WL", cat:"crater", alt:"", dSeed:2, diff:3, status:"draft",
     epoch:"Nectarian",
     size:[{ label:"Diameter", value:"84 km (52 mi)" }],
     bestDays:[[11,13],[26,27]],
@@ -835,7 +835,7 @@ const CARDS = [
       "The Rimae Mersenius run north to south in the mare to the east."
     ],
     tips:"Day 12, on the western Humorum shore under a low sun. A 100 mm scope shows the bulged floor and the secondary chain; 150 mm the rilles." },
-  { id:"L45", zone:"EH", cat:"crater", alt:"", dSeed:2, diff:2, status:"draft",
+  { id:"L45", zone:"EI", cat:"crater", alt:"", dSeed:2, diff:2, status:"draft",
     epoch:"Nectarian",
     size:[{ label:"Diameter", value:"114 km (71 mi)" }],
     bestDays:[[6,8],[21,23]],
@@ -853,7 +853,7 @@ const CARDS = [
       "It is a striking sight when the first-quarter terminator runs through it."
     ],
     tips:"Day 7, southern highlands on the terminator. Almost any scope shows the deep interior and peaks; the saturated ground around it is the thing to notice." },
-  { id:"L46", zone:"WH", cat:"crater", alt:"", dSeed:3, diff:3, status:"draft",
+  { id:"L46", zone:"WI", cat:"crater", alt:"", dSeed:3, diff:3, status:"draft",
     epoch:"Nectarian",
     size:[{ label:"Crater", value:"124 km (77 mi)" }],
     bestDays:[[7,9],[22,24]],
@@ -871,7 +871,7 @@ const CARDS = [
       "The Walter, Regiomontanus and Purbach column is a classic first-quarter chain."
     ],
     tips:"Day 8, near the central meridian on the terminator. A 150 mm scope and steady air show the pit on the peak." },
-  { id:"L47", zone:"WH", cat:"volc", alt:"", dSeed:3, diff:3, status:"draft",
+  { id:"L47", zone:"WI", cat:"volc", alt:"", dSeed:3, diff:3, status:"draft",
     epoch:"Imbrian volcanism on a Nectarian crater",
     size:[{ label:"Crater", value:"119 km (74 mi)" }],
     bestDays:[[7,9],[22,24]],
@@ -889,7 +889,7 @@ const CARDS = [
       "Ranger 9 crashed into the floor in 1965, sending back close-up pictures to the last second."
     ],
     tips:"Day 8, just west of centre. Any scope shows the crater and its central peak; the dark spots need 150 mm and a low-to-moderate sun." },
-  { id:"L48", zone:"EH", cat:"valley", alt:"", dSeed:3, diff:2, status:"draft",
+  { id:"L48", zone:"EI", cat:"valley", alt:"", dSeed:3, diff:2, status:"draft",
     epoch:"Imbrian",
     size:[{ label:"Region", value:"~130 km (81 mi) across" }],
     bestDays:[[4,6],[19,21]],
@@ -907,7 +907,7 @@ const CARDS = [
       "The whole set fits inside about a 40 km span."
     ],
     tips:"Day 5, eastern Tranquillitatis on the terminator. A 100 mm scope shows the fault, the rille and the crater together." },
-  { id:"L49", zone:"WH", cat:"volc", alt:"", dSeed:3, diff:3, status:"draft",
+  { id:"L49", zone:"WI", cat:"volc", alt:"", dSeed:3, diff:3, status:"draft",
     epoch:"Imbrian, possibly evolved volcanism",
     size:[{ label:"Domes", value:"~20 km (12 mi) across the pair" }],
     bestDays:[[10,12],[25,27]],
@@ -925,7 +925,7 @@ const CARDS = [
       "They stand on the boundary between the Jura Mountains and northern Mare Imbrium."
     ],
     tips:"Day 10 or 11, northwest Imbrium shore under a low sun. A 100 mm scope shows the two rounded humps above the mare; higher power their steep profiles." },
-  { id:"L50", zone:"EH", cat:"maria", alt:"", dSeed:3, diff:2, status:"draft",
+  { id:"L50", zone:"EI", cat:"maria", alt:"", dSeed:3, diff:2, status:"draft",
     epoch:"Imbrian (Cayley Formation)",
     size:[{ label:"Patch", value:"~14 km (9 mi)" }],
     bestDays:[[6,8],[21,23]],
@@ -943,7 +943,7 @@ const CARDS = [
       "The samples turned out to be debris sheets flung from large basin impacts."
     ],
     tips:"Day 7, central highlands on the terminator. Any scope shows the smooth pale floors between the rugged hills near Cayley and Whewell." },
-  { id:"L51", zone:"WH", cat:"crater", alt:"Catena Davy", dSeed:3, diff:4, status:"draft",
+  { id:"L51", zone:"WI", cat:"crater", alt:"Catena Davy", dSeed:3, diff:4, status:"draft",
     epoch:"Copernican",
     size:[{ label:"Length", value:"~50 km (31 mi)" }],
     bestDays:[[7,9],[22,24]],
@@ -961,7 +961,7 @@ const CARDS = [
       "It takes 150 mm and good seeing to resolve the craterlets."
     ],
     tips:"Day 8, near the central meridian. Find the crater Davy first, then look for the fine dotted line on the neighbouring floor at high power." },
-  { id:"L52", zone:"WR", cat:"crater", alt:"", dSeed:3, diff:3, status:"draft",
+  { id:"L52", zone:"WL", cat:"crater", alt:"", dSeed:3, diff:3, status:"draft",
     epoch:"Nectarian crater, later lava",
     size:[{ label:"Diameter", value:"45 km (28 mi)" }],
     bestDays:[[12,14],[27,27]],
@@ -979,7 +979,7 @@ const CARDS = [
       "Foreshortening near the limb makes the crater look distinctly oval."
     ],
     tips:"Day 13, southwest limb, at favourable libration. Low power shows the dark floor as an inky spot; there is little internal detail to chase." },
-  { id:"L53", zone:"EH", cat:"maria", alt:"", dSeed:3, diff:3, status:"draft",
+  { id:"L53", zone:"EI", cat:"maria", alt:"", dSeed:3, diff:3, status:"draft",
     epoch:"buried Nectarian, Imbrian fill",
     size:[{ label:"Ring", value:"~106 km (66 mi)" }],
     bestDays:[[5,7],[20,22]],
@@ -997,7 +997,7 @@ const CARDS = [
       "The ridges stand for a night or two around the terminator, then vanish."
     ],
     tips:"Day 6, southern Tranquillitatis right on the terminator. A 100 mm scope at low power and a patient eye are what it takes." },
-  { id:"L54", zone:"WH", cat:"valley", alt:"Rimae Hippalus", dSeed:3, diff:3, status:"draft",
+  { id:"L54", zone:"WI", cat:"valley", alt:"Rimae Hippalus", dSeed:3, diff:3, status:"draft",
     epoch:"Imbrian",
     size:[{ label:"Extent", value:"~240 km (149 mi)" }],
     bestDays:[[9,11],[24,26]],
@@ -1015,7 +1015,7 @@ const CARDS = [
       "The Campanus and Mercator craters sit at the southern end of the system."
     ],
     tips:"Day 10, on the eastern Humorum shore under a low sun. A 100 mm scope shows two or three of the arcs; more aperture shows more." },
-  { id:"L55", zone:"EH", cat:"crater", alt:"", dSeed:3, diff:3, status:"draft",
+  { id:"L55", zone:"EI", cat:"crater", alt:"", dSeed:3, diff:3, status:"draft",
     epoch:"Nectarian",
     size:[{ label:"Diameter", value:"69 km (43 mi)" }],
     bestDays:[[5,7],[20,22]],
@@ -1033,7 +1033,7 @@ const CARDS = [
       "It lies deep enough south that libration matters for seeing it well."
     ],
     tips:"Day 6, deep south on the terminator, with favourable libration. Low power shows the crater and the surprising smoothness around it." },
-  { id:"L56", zone:"ER", cat:"maria", alt:"", dSeed:3, diff:4, status:"draft",
+  { id:"L56", zone:"EL", cat:"maria", alt:"", dSeed:3, diff:4, status:"draft",
     epoch:"pre-Nectarian",
     size:[{ label:"Basin", value:"~600 km (370 mi)" }],
     bestDays:[[0,2],[15,17]],
@@ -1051,7 +1051,7 @@ const CARDS = [
       "It is one of the least conspicuous named basins from Earth."
     ],
     tips:"Around the crescent phases for the sunrise view, better after full Moon, always with strong eastern libration. Low power shows dark blotches along the limb." },
-  { id:"L57", zone:"WR", cat:"special", alt:"", dSeed:3, diff:2, status:"draft",
+  { id:"L57", zone:"WL", cat:"special", alt:"", dSeed:3, diff:2, status:"draft",
     epoch:"surface marking, age uncertain",
     size:[{ label:"Extent", value:"~70 km (43 mi)" }],
     bestDays:[[12,14],[27,27]],
@@ -1069,7 +1069,7 @@ const CARDS = [
       "It shows no detail at low sun because it is pure tone, not shape."
     ],
     tips:"High sun, day 12 onward toward full Moon. An 80 mm scope shows the bright comma shape west of the crater Reiner." },
-  { id:"L58", zone:"ER", cat:"valley", alt:"Vallis Rheita", dSeed:3, diff:3, status:"draft",
+  { id:"L58", zone:"EL", cat:"valley", alt:"Vallis Rheita", dSeed:3, diff:3, status:"draft",
     epoch:"Nectarian",
     size:[{ label:"Length", value:"~450 km (280 mi)" }],
     bestDays:[[3,5],[18,20]],
@@ -1087,7 +1087,7 @@ const CARDS = [
       "Under a low sun the beads-on-a-string structure is clear at higher power."
     ],
     tips:"Day 4, southeast under a low sun with decent libration. Low power shows the whole gash; higher power the individual craters." },
-  { id:"L59", zone:"WR", cat:"maria", alt:"", dSeed:3, diff:4, status:"draft",
+  { id:"L59", zone:"WL", cat:"maria", alt:"", dSeed:3, diff:4, status:"draft",
     epoch:"pre-Nectarian",
     size:[{ label:"Basin", value:"~335 km (208 mi)" }],
     bestDays:[[11,13],[26,27]],
@@ -1105,7 +1105,7 @@ const CARDS = [
       "The region needs favourable libration to be seen well."
     ],
     tips:"Day 11 or 12 in the southwest, with favourable libration. Low power and a low sun show the ring of hills; this is a know-what-you-are-looking-for object." },
-  { id:"L60", zone:"WH", cat:"volc", alt:"Kies π", dSeed:3, diff:3, status:"draft",
+  { id:"L60", zone:"WI", cat:"volc", alt:"Kies π", dSeed:3, diff:3, status:"draft",
     epoch:"Imbrian volcanism",
     size:[{ label:"Dome", value:"~12 km (7 mi)" }],
     bestDays:[[9,11],[24,26]],
@@ -1123,7 +1123,7 @@ const CARDS = [
       "It is a textbook mare dome, useful for learning what to look for elsewhere."
     ],
     tips:"Day 10, Mare Nubium on the terminator. A 100 mm scope and a very low sun show the dome and its pit; it fades under higher light." },
-  { id:"L61", zone:"WH", cat:"crater", alt:"", dSeed:3, diff:2, status:"draft",
+  { id:"L61", zone:"WI", cat:"crater", alt:"", dSeed:3, diff:2, status:"draft",
     epoch:"Copernican",
     size:[{ label:"Diameter", value:"13 km (8 mi)" }],
     bestDays:[[7,9],[22,24]],
@@ -1141,7 +1141,7 @@ const CARDS = [
       "It is bright enough to serve as a landmark for finding fainter nearby features."
     ],
     tips:"Day 8, just southwest of the exact centre. Any scope shows it as a brilliant little point." },
-  { id:"L62", zone:"WR", cat:"volc", alt:"Mons Rümker", dSeed:3, diff:3, status:"draft",
+  { id:"L62", zone:"WL", cat:"volc", alt:"Mons Rümker", dSeed:3, diff:3, status:"draft",
     epoch:"Imbrian volcanism",
     size:[{ label:"Diameter", value:"~70 km (43 mi)" }],
     bestDays:[[12,14],[27,27]],
@@ -1159,7 +1159,7 @@ const CARDS = [
       "The dome tops on its surface show only at grazing sun."
     ],
     tips:"Day 12 or 13, far northwest Procellarum, with libration helping. A 100 mm scope shows the raised patch; larger scopes the lumpy tops." },
-  { id:"L63", zone:"EH", cat:"special", alt:"", dSeed:3, diff:3, status:"draft",
+  { id:"L63", zone:"EI", cat:"special", alt:"", dSeed:3, diff:3, status:"draft",
     epoch:"Lower Imbrian",
     size:[{ label:"Pattern", value:"radial to Mare Imbrium" }],
     bestDays:[[6,8],[21,23]],
@@ -1177,7 +1177,7 @@ const CARDS = [
       "Every valley and ridge in the set points back toward the centre of Imbrium."
     ],
     tips:"Day 7, first quarter, with the ground southeast of Imbrium on the terminator. Low power and a low sun bring out the combed texture." },
-  { id:"L64", zone:"EH", cat:"crater", alt:"", dSeed:3, diff:3, status:"draft",
+  { id:"L64", zone:"EI", cat:"crater", alt:"", dSeed:3, diff:3, status:"draft",
     epoch:"Nectarian crater",
     size:[{ label:"Diameter", value:"48 km (30 mi)" }],
     bestDays:[[6,8],[21,23]],
@@ -1195,7 +1195,7 @@ const CARDS = [
       "Apollo 16 was the only mission to land in the lunar highlands."
     ],
     tips:"Day 7, central highlands. A 100 mm scope shows the low crater and the rough ground around the landing site." },
-  { id:"L65", zone:"WH", cat:"volc", alt:"", dSeed:3, diff:3, status:"draft",
+  { id:"L65", zone:"WI", cat:"volc", alt:"", dSeed:3, diff:3, status:"draft",
     epoch:"Imbrian volcanism",
     size:[{ label:"Field", value:"~10 km (6 mi) across" }],
     bestDays:[[9,11],[24,26]],
@@ -1213,7 +1213,7 @@ const CARDS = [
       "The group is a natural test of seeing and low-sun timing."
     ],
     tips:"Day 10, between Copernicus and Kepler on the terminator. A 100 mm scope at low sun shows the blisters; higher power the summit pits." },
-  { id:"L66", zone:"EH", cat:"valley", alt:"Rima Hadley", dSeed:4, diff:3, status:"draft",
+  { id:"L66", zone:"EI", cat:"valley", alt:"Rima Hadley", dSeed:4, diff:3, status:"draft",
     epoch:"Imbrian volcanism",
     size:[{ label:"Length", value:"~80 km (50 mi)" }, { label:"Width", value:"~1.5 km (1 mi)" }],
     depth:"~300 m (1,000 ft)",
@@ -1232,7 +1232,7 @@ const CARDS = [
       "It runs for roughly 80 km along the base of the Apennines."
     ],
     tips:"Day 8, with the Apennine front on the terminator. A 150 mm scope and steady air show the rille as a thread against the mountains." },
-  { id:"L67", zone:"WH", cat:"special", alt:"", dSeed:4, diff:3, status:"draft",
+  { id:"L67", zone:"WI", cat:"special", alt:"", dSeed:4, diff:3, status:"draft",
     epoch:"Lower Imbrian",
     size:[{ label:"Feature", value:"Imbrium ejecta blanket" }],
     bestDays:[[8,10],[23,25]],
@@ -1250,7 +1250,7 @@ const CARDS = [
       "The crew hauled a cart of tools uphill toward Cone Crater but ran out of time short of the rim."
     ],
     tips:"Day 9, south of Copernicus. A low sun shows the rolling, grooved ground; the craters Fra Mauro, Bonpland and Parry frame the site." },
-  { id:"L68", zone:"WH", cat:"crater", alt:"", dSeed:4, diff:3, status:"draft",
+  { id:"L68", zone:"WI", cat:"crater", alt:"", dSeed:4, diff:3, status:"draft",
     epoch:"buried pre-Imbrian, Imbrian fill",
     size:[{ label:"Ring", value:"~110 km (68 mi)" }],
     bestDays:[[11,13],[26,27]],
@@ -1268,7 +1268,7 @@ const CARDS = [
       "It shows how deep the Procellarum lavas ran, enough to drown a crater this size."
     ],
     tips:"Day 11 or 12, western Procellarum under a low sun. A 100 mm scope shows the broken ring of hummocks; a high sun erases it." },
-  { id:"L69", zone:"WH", cat:"crater", alt:"", dSeed:4, diff:3, status:"draft",
+  { id:"L69", zone:"WI", cat:"crater", alt:"", dSeed:4, diff:3, status:"draft",
     epoch:"Copernican",
     size:[{ label:"Craterlets", value:"~4 km (2 mi) and smaller" }],
     bestDays:[[8,10],[23,25]],
@@ -1286,7 +1286,7 @@ const CARDS = [
       "They look ragged and paired, unlike the clean bowls of primary impacts."
     ],
     tips:"Day 9 or 10, the mare north of Copernicus on the terminator. A 100 mm scope shows the irregular pits and chains around Pytheas." },
-  { id:"L70", zone:"ER", cat:"maria", alt:"", dSeed:4, diff:4, status:"draft",
+  { id:"L70", zone:"EL", cat:"maria", alt:"", dSeed:4, diff:4, status:"draft",
     epoch:"Nectarian",
     size:[{ label:"Basin", value:"~600 km (370 mi)" }, { label:"Mare", value:"~270 km (170 mi)" }],
     bestDays:[[0,2],[15,17]],
@@ -1304,7 +1304,7 @@ const CARDS = [
       "The dark central mare is what catches the eye first."
     ],
     tips:"Just after full Moon, or the crescent phases for the sunrise view, always with strong northeast libration. Low power shows the dark oval and a partial ring." },
-  { id:"L71", zone:"EH", cat:"volc", alt:"", dSeed:4, diff:3, status:"draft",
+  { id:"L71", zone:"EI", cat:"volc", alt:"", dSeed:4, diff:3, status:"draft",
     epoch:"Imbrian volcanism",
     size:[{ label:"Deposit", value:"tens of km across" }],
     bestDays:[[6,8],[21,23]],
@@ -1322,7 +1322,7 @@ const CARDS = [
       "The nearby Serpentine Ridge makes a good pointer to it."
     ],
     tips:"A moderate to high sun, day 7 onward, since this is a tone feature. A 100 mm scope shows the dusky smudge on the mare edge." },
-  { id:"L72", zone:"EH", cat:"volc", alt:"", dSeed:4, diff:3, status:"draft",
+  { id:"L72", zone:"EI", cat:"volc", alt:"", dSeed:4, diff:3, status:"draft",
     epoch:"Imbrian volcanism on an older crater",
     size:[{ label:"Crater", value:"87 km (54 mi)" }],
     bestDays:[[3,5],[18,20]],
@@ -1340,7 +1340,7 @@ const CARDS = [
       "The dark spots lie along the rilles that web the crater floor."
     ],
     tips:"Day 4, northeast quadrant on the terminator. A 100 mm scope shows Atlas's fractured floor; 150 mm the dark-haloed pits." },
-  { id:"L73", zone:"ER", cat:"maria", alt:"", dSeed:4, diff:4, status:"draft",
+  { id:"L73", zone:"EL", cat:"maria", alt:"", dSeed:4, diff:4, status:"draft",
     epoch:"pre-Nectarian",
     size:[{ label:"Basin", value:"~500 km (310 mi)" }],
     bestDays:[[0,2],[15,17]],
@@ -1358,7 +1358,7 @@ const CARDS = [
       "Libration in longitude can swing it fully into view or hide it completely."
     ],
     tips:"Only at strong eastern libration, near full Moon. Low power shows a dark strip along the equatorial limb, seen nearly sideways." },
-  { id:"L74", zone:"WH", cat:"crater", alt:"", dSeed:4, diff:3, status:"draft",
+  { id:"L74", zone:"WI", cat:"crater", alt:"", dSeed:4, diff:3, status:"draft",
     epoch:"Copernican",
     size:[{ label:"Diameter", value:"5 km (3 mi)" }],
     bestDays:[[8,10],[23,25]],
@@ -1376,7 +1376,7 @@ const CARDS = [
       "It sits within the pale ejecta apron of Copernicus, which makes the contrast sharp."
     ],
     tips:"Day 9, southeast of Copernicus. A 150 mm scope and a moderate-to-high sun show the dark ring around the tiny pit." },
-  { id:"L75", zone:"WH", cat:"crater", alt:"", dSeed:4, diff:4, status:"draft",
+  { id:"L75", zone:"WI", cat:"crater", alt:"", dSeed:4, diff:4, status:"draft",
     epoch:"degraded; floor is Imbrian fill",
     size:[{ label:"Diameter", value:"16 km (10 mi)" }],
     bestDays:[[7,9],[22,24]],
@@ -1394,7 +1394,7 @@ const CARDS = [
       "As the sun rises the saucer fills with light and disappears."
     ],
     tips:"Day 8, near the central meridian, within a few hours of local sunrise on Ptolemaeus. A 150 mm scope shows the shallow dish." },
-  { id:"L76", zone:"EH", cat:"crater", alt:"", dSeed:4, diff:4, status:"draft",
+  { id:"L76", zone:"EI", cat:"crater", alt:"", dSeed:4, diff:4, status:"draft",
     epoch:"pre-Nectarian",
     size:[{ label:"Diameter", value:"158 km (98 mi)" }],
     bestDays:[[7,9],[22,24]],
@@ -1412,7 +1412,7 @@ const CARDS = [
       "Its degraded state makes it nearly invisible under a high sun."
     ],
     tips:"Day 8, far north on the terminator, with favourable libration. A low sun shows the low ring and the floor rille." },
-  { id:"L77", zone:"WR", cat:"valley", alt:"Rima Sirsalis", dSeed:4, diff:3, status:"draft",
+  { id:"L77", zone:"WL", cat:"valley", alt:"Rima Sirsalis", dSeed:4, diff:3, status:"draft",
     epoch:"Imbrian or later faulting",
     size:[{ label:"Length", value:"~400 km (250 mi)" }],
     bestDays:[[12,14],[27,27]],
@@ -1430,7 +1430,7 @@ const CARDS = [
       "Its radial trend is cited by some as evidence for a giant buried basin under Procellarum."
     ],
     tips:"Day 13, southwest near the limb, with favourable libration. A 100 mm scope shows the long straight cleft, best under a low sun." },
-  { id:"L78", zone:"WH", cat:"crater", alt:"", dSeed:4, diff:3, status:"draft",
+  { id:"L78", zone:"WI", cat:"crater", alt:"", dSeed:4, diff:3, status:"draft",
     epoch:"buried pre-fill crater",
     size:[{ label:"Ring", value:"~55 km (34 mi)" }],
     bestDays:[[9,11],[24,26]],
@@ -1448,7 +1448,7 @@ const CARDS = [
       "Only the sun angle makes it appear or vanish."
     ],
     tips:"Day 10, Mare Imbrium south of Lambert on the terminator. A 100 mm scope at low sun shows the faint ring; it flattens out within a day or two." },
-  { id:"L79", zone:"WH", cat:"volc", alt:"", dSeed:4, diff:2, status:"draft",
+  { id:"L79", zone:"WI", cat:"volc", alt:"", dSeed:4, diff:2, status:"draft",
     epoch:"Imbrian volcanism",
     size:[{ label:"Deposit", value:"~90 km (56 mi)" }],
     bestDays:[[7,9],[22,24]],
@@ -1466,7 +1466,7 @@ const CARDS = [
       "It sits in a gap in the ring of bright highlands around Copernicus."
     ],
     tips:"Any time the bay is lit. The dark eastern patch shows in binoculars near full Moon; a scope adds the contrast with the brighter mare to the west." },
-  { id:"L80", zone:"WR", cat:"maria", alt:"", dSeed:4, diff:5, status:"draft",
+  { id:"L80", zone:"WL", cat:"maria", alt:"", dSeed:4, diff:5, status:"draft",
     epoch:"Lower Imbrian",
     size:[{ label:"Diameter", value:"~930 km (580 mi)" }],
     bestDays:[[15,17],[27,27]],
@@ -1484,7 +1484,7 @@ const CARDS = [
       "It is the standard against which basin structure everywhere else is measured."
     ],
     tips:"Day 15 or just after full Moon, with strong western libration. Low power shows the arcs of the Cordillera as a bright curved range on the limb." },
-  { id:"L81", zone:"WH", cat:"crater", alt:"", dSeed:4, diff:4, status:"draft",
+  { id:"L81", zone:"WI", cat:"crater", alt:"", dSeed:4, diff:4, status:"draft",
     epoch:"uncertain",
     size:[{ label:"Diameter", value:"15 km (9 mi)" }],
     bestDays:[[8,10],[23,25]],
@@ -1502,7 +1502,7 @@ const CARDS = [
       "Too low a sun fills the ring with shadow and hides the effect."
     ],
     tips:"Day 9, southern Nubium. A 150 mm scope and steady seeing at a moderate sun show the ring within the ring." },
-  { id:"L82", zone:"EH", cat:"crater", alt:"", dSeed:4, diff:3, status:"draft",
+  { id:"L82", zone:"EI", cat:"crater", alt:"", dSeed:4, diff:3, status:"draft",
     epoch:"Copernican",
     size:[{ label:"Diameter", value:"2.4 km (1.5 mi)" }],
     bestDays:[[6,8],[21,23]],
@@ -1520,7 +1520,7 @@ const CARDS = [
       "The bright halo around it is the easy part; the crater itself needs aperture."
     ],
     tips:"A high sun, day 8 onward toward full Moon. A 100 mm scope shows it as a bright dot; 200 mm as a real crater." },
-  { id:"L83", zone:"WH", cat:"crater", alt:"", dSeed:4, diff:4, status:"draft",
+  { id:"L83", zone:"WI", cat:"crater", alt:"", dSeed:4, diff:4, status:"draft",
     epoch:"Plato is Imbrian; the floor lava is younger",
     size:[{ label:"Craterlets", value:"~2 km (1 mi) and smaller" }],
     bestDays:[[8,10],[23,25]],
@@ -1538,7 +1538,7 @@ const CARDS = [
       "The floor darkens noticeably from rim to centre, an illusion of contrast with the bright walls."
     ],
     tips:"Day 9, near first quarter, with the sun moderately high so Plato's floor is fully lit. Steady air matters more than aperture; try 150 to 250 mm." },
-  { id:"L84", zone:"WH", cat:"crater", alt:"", dSeed:4, diff:2, status:"draft",
+  { id:"L84", zone:"WI", cat:"crater", alt:"", dSeed:4, diff:2, status:"draft",
     epoch:"Nectarian crater, Imbrian fill",
     size:[{ label:"Diameter", value:"97 km (60 mi)" }],
     bestDays:[[8,10],[23,25]],
@@ -1556,7 +1556,7 @@ const CARDS = [
       "A low sun turns the floor cracks into fine dark lines."
     ],
     tips:"Day 9, southern Nubium on the terminator. A 100 mm scope shows the peak and the wall break to Hesiodus; 150 mm the rilles." },
-  { id:"L85", zone:"ER", cat:"special", alt:"", dSeed:4, diff:2, status:"draft",
+  { id:"L85", zone:"EL", cat:"special", alt:"", dSeed:4, diff:2, status:"draft",
     epoch:"Eratosthenian to early Copernican",
     size:[{ label:"Crater", value:"132 km (82 mi)" }],
     bestDays:[[2,4],[17,19]],
@@ -1574,7 +1574,7 @@ const CARDS = [
       "Van Langren's 1645 map named features for royalty and saints, and almost none of his names survived."
     ],
     tips:"Near full Moon for the rays, day 3 or 4 for the crater under a low sun. An 80 mm scope shows the terraces and peaks." },
-  { id:"L86", zone:"WH", cat:"valley", alt:"Rimae Prinz", dSeed:5, diff:4, status:"draft",
+  { id:"L86", zone:"WI", cat:"valley", alt:"Rimae Prinz", dSeed:5, diff:4, status:"draft",
     epoch:"Imbrian volcanism",
     size:[{ label:"Extent", value:"~46 km (29 mi)" }],
     bestDays:[[10,12],[25,27]],
@@ -1592,7 +1592,7 @@ const CARDS = [
       "The area links to the Harbinger Mountains and the wider Aristarchus Plateau."
     ],
     tips:"Day 11, northwest under a low sun. A 150 mm scope and good seeing show two or three of the curving channels; a hard but rewarding target." },
-  { id:"L87", zone:"ER", cat:"crater", alt:"", dSeed:5, diff:4, status:"draft",
+  { id:"L87", zone:"EL", cat:"crater", alt:"", dSeed:5, diff:4, status:"draft",
     epoch:"Nectarian",
     size:[{ label:"Diameter", value:"207 km (129 mi)" }],
     bestDays:[[0,2],[15,17]],
@@ -1610,7 +1610,7 @@ const CARDS = [
       "At about 200 km across it is one of the largest craters with such a well-developed fractured floor."
     ],
     tips:"Just after full Moon, with strong southeast libration. Low power shows the ring and central peaks; larger scopes hint at the floor rilles when the limb tips our way." },
-  { id:"L88", zone:"EH", cat:"crater", alt:"", dSeed:5, diff:5, status:"draft",
+  { id:"L88", zone:"EI", cat:"crater", alt:"", dSeed:5, diff:5, status:"draft",
     epoch:"pre-Nectarian",
     size:[{ label:"Diameter", value:"74 km (46 mi)" }],
     bestDays:[[4,6],[19,21]],
@@ -1628,7 +1628,7 @@ const CARDS = [
       "The permanently shadowed floor is a candidate cold trap for ice."
     ],
     tips:"Only at strong northern libration. Find the polar glare on the terminator and look for the last crater before the edge; expect a thin, shadowed arc." },
-  { id:"L89", zone:"EH", cat:"volc", alt:"", dSeed:5, diff:4, status:"draft",
+  { id:"L89", zone:"EI", cat:"volc", alt:"", dSeed:5, diff:4, status:"draft",
     epoch:"Imbrian volcanism",
     size:[{ label:"Dome", value:"~30 km (19 mi)" }],
     bestDays:[[6,8],[21,23]],
@@ -1646,7 +1646,7 @@ const CARDS = [
       "It is broad but only tens of metres high, so it disappears under any real light."
     ],
     tips:"Day 6 or 7, west Serenitatis right on the terminator. A 150 mm scope and a sun within a couple of degrees of local sunrise show the broad swelling." },
-  { id:"L90", zone:"EH", cat:"crater", alt:"", dSeed:5, diff:4, status:"draft",
+  { id:"L90", zone:"EI", cat:"crater", alt:"", dSeed:5, diff:4, status:"draft",
     epoch:"Copernican to Eratosthenian",
     size:[{ label:"Each", value:"~3 to 5 km (2 to 3 mi)" }],
     bestDays:[[5,7],[20,22]],
@@ -1664,7 +1664,7 @@ const CARDS = [
       "Observers use the three pits to point toward a landing site that has no telescopic marker."
     ],
     tips:"Day 6, southern Tranquillitatis. A 150 mm scope shows the three pits in a rough line." },
-  { id:"L91", zone:"WR", cat:"valley", alt:"Rimae de Gasparis", dSeed:5, diff:4, status:"draft",
+  { id:"L91", zone:"WL", cat:"valley", alt:"Rimae de Gasparis", dSeed:5, diff:4, status:"draft",
     epoch:"Imbrian",
     size:[{ label:"Extent", value:"~90 km (56 mi)" }],
     bestDays:[[11,13],[26,27]],
@@ -1682,7 +1682,7 @@ const CARDS = [
       "The whole tangle fits within about 90 km."
     ],
     tips:"Day 12, southwest of Mare Humorum under a low sun. A 150 mm scope and steady air show two or three of the clefts and their crossings." },
-  { id:"L92", zone:"EH", cat:"valley", alt:"Vallis Gyldén", dSeed:5, diff:4, status:"draft",
+  { id:"L92", zone:"EI", cat:"valley", alt:"Vallis Gyldén", dSeed:5, diff:4, status:"draft",
     epoch:"Lower Imbrian",
     size:[{ label:"Length", value:"~47 km (29 mi)" }],
     bestDays:[[7,9],[22,24]],
@@ -1700,7 +1700,7 @@ const CARDS = [
       "Other Imbrium-radial grooves nearby help confirm the alignment."
     ],
     tips:"Day 8, near the central meridian under a low sun. A 100 mm scope shows it as a shallow gash lined up with its neighbours." },
-  { id:"L93", zone:"EH", cat:"special", alt:"", dSeed:5, diff:3, status:"draft",
+  { id:"L93", zone:"EI", cat:"special", alt:"", dSeed:5, diff:3, status:"draft",
     epoch:"Copernican",
     size:[{ label:"Rays", value:"~18 km (11 mi) crater" }],
     bestDays:[[5,7],[20,22]],
@@ -1718,7 +1718,7 @@ const CARDS = [
       "The effect needs a high sun, like all ray systems."
     ],
     tips:"A high sun, day 7 onward toward full Moon. A 100 mm scope shows the crater on the Tranquillitatis shore with its odd mix of pale and dusky streaks." },
-  { id:"L94", zone:"WR", cat:"crater", alt:"", dSeed:5, diff:5, status:"draft",
+  { id:"L94", zone:"WL", cat:"crater", alt:"", dSeed:5, diff:5, status:"draft",
     epoch:"pre-Nectarian",
     size:[{ label:"Diameter", value:"162 km (101 mi)" }],
     bestDays:[[14,16],[27,27]],
@@ -1736,7 +1736,7 @@ const CARDS = [
       "Position is the achievement here; detail is minimal."
     ],
     tips:"Only at favourable southern libration, near full Moon. Look for the last big shadow-filled ring before the southwest edge." },
-  { id:"L95", zone:"WH", cat:"maria", alt:"", dSeed:5, diff:3, status:"draft",
+  { id:"L95", zone:"WI", cat:"maria", alt:"", dSeed:5, diff:3, status:"draft",
     epoch:"pre-Nectarian, if it is an impact at all",
     size:[{ label:"Proposed diameter", value:"~3,000 km (1,900 mi)" }],
     bestDays:[[8,10],[23,25]],
@@ -1754,7 +1754,7 @@ const CARDS = [
       "If real, it would be the largest impact structure on the Moon."
     ],
     tips:"Nothing to see directly. Instead take in the whole sweep of Oceanus Procellarum with the naked eye or binoculars, the dark expanse the debate is about." },
-  { id:"L96", zone:"EH", cat:"mtn", alt:"", dSeed:5, diff:5, status:"draft",
+  { id:"L96", zone:"EI", cat:"mtn", alt:"", dSeed:5, diff:5, status:"draft",
     epoch:"pre-Nectarian",
     size:[{ label:"Feature", value:"south-limb rim peaks" }],
     bestDays:[[4,6],[19,21]],
@@ -1772,7 +1772,7 @@ const CARDS = [
       "Early observers wrongly credited the range with Himalayan heights."
     ],
     tips:"Strong southern libration near full Moon. Watch the south limb for irregular bumps standing off the edge against black sky." },
-  { id:"L97", zone:"WR", cat:"valley", alt:"Vallis Inghirami", dSeed:5, diff:4, status:"draft",
+  { id:"L97", zone:"WL", cat:"valley", alt:"Vallis Inghirami", dSeed:5, diff:4, status:"draft",
     epoch:"Lower Imbrian",
     size:[{ label:"Length", value:"~140 km (87 mi)" }],
     bestDays:[[13,15],[27,27]],
@@ -1790,7 +1790,7 @@ const CARDS = [
       "Its alignment toward the limb is the clue to its origin."
     ],
     tips:"Day 13 or 14, southwest under a low sun with good libration. Low power shows the wide trough lined up with the Orientale rings on the limb." },
-  { id:"L98", zone:"WH", cat:"maria", alt:"", dSeed:5, diff:4, status:"draft",
+  { id:"L98", zone:"WI", cat:"maria", alt:"", dSeed:5, diff:4, status:"draft",
     epoch:"Eratosthenian (young mare)",
     size:[{ label:"Fronts", value:"tens of km long, only metres high" }],
     bestDays:[[9,11],[24,26]],
@@ -1808,7 +1808,7 @@ const CARDS = [
       "They lie near the craters Euler and La Hire."
     ],
     tips:"Day 9 or 10, southwest Imbrium exactly on the terminator. A 150 mm scope and the lowest possible sun show the flows as faint ribbon-edged steps; a timing-critical target." },
-  { id:"L99", zone:"EH", cat:"volc", alt:"Ina (D-caldera)", dSeed:5, diff:5, status:"draft",
+  { id:"L99", zone:"EI", cat:"volc", alt:"Ina (D-caldera)", dSeed:5, diff:5, status:"draft",
     epoch:"very young, possibly tens of millions of years",
     size:[{ label:"Diameter", value:"~3 km (2 mi)" }, { label:"Depth", value:"~60 m (200 ft)" }],
     bestDays:[[6,8],[21,23]],
@@ -1826,7 +1826,7 @@ const CARDS = [
       "It sits near the Triesnecker and Hyginus rille fields."
     ],
     tips:"Effectively impossible for a visual telescope at 3 km on the floor of a small lake. Included as a know-it-is-there object near the central rille country." },
-  { id:"L100", zone:"ER", cat:"special", alt:"", dSeed:5, diff:5, status:"draft",
+  { id:"L100", zone:"EL", cat:"special", alt:"", dSeed:5, diff:5, status:"draft",
     epoch:"surface marking",
     size:[{ label:"Swirls", value:"tens of km across" }],
     bestDays:[[0,2],[15,17]],

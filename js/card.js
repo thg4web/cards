@@ -23,10 +23,10 @@
             lat: 6, lon: 7, rukl: 8, stAtlas: 9, notes: 10 };
 
   var ZONE_LABEL = {
-    ER: ["Eastern", "Rim"], EH: ["Eastern", "Heartland"],
-    WH: ["Western", "Heartland"], WR: ["Western", "Rim"]
+    EL: ["Eastern", "Limb"], EI: ["Eastern", "Interior"],
+    WI: ["Western", "Interior"], WL: ["Western", "Limb"]
   };
-  var ZONE_CLASS = { ER: "zone-er", EH: "zone-eh", WH: "zone-wh", WR: "zone-wr" };
+  var ZONE_CLASS = { EL: "zone-el", EI: "zone-ei", WI: "zone-wi", WL: "zone-wl" };
 
   var CAT_LABEL = {
     maria: "Maria & Plains", crater: "Craters", valley: "Valleys & Rilles",

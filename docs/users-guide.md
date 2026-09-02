@@ -43,14 +43,15 @@ Four pills, one per zone, each in that zone's own colour:
 
 | Zone | Colour |
 |------|--------|
-| Eastern Rim | steel blue |
-| Eastern Heartland | forest green |
-| Western Heartland | light red |
-| Western Rim | light yellow |
+| Eastern Limb | steel blue |
+| Eastern Interior | forest green |
+| Western Interior | light red |
+| Western Limb | light yellow |
 
-Selecting a zone pill filters the strip to that zone's cards. The three concept
-cards (L1–L3) have no zone; in Color mode they fall back to the Eastern Rim
-strip.
+The two **Limb** zones are the foreshortened, libration-dependent edges of the
+disc; the two **Interior** zones are the central maria. Selecting a zone pill
+filters the strip to that zone's cards. The three concept cards (L1–L3) have no
+zone; in Color mode they fall back to the Eastern Limb strip.
 
 ### Phase — by Moon phase
 
