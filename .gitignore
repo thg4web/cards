@@ -5,3 +5,15 @@ design/plates/src-*
 design/plates/.trekcache/
 __pycache__/
 *.pyc
+
+# Not needed to serve the site — dev/build/source only (trimmed 2026-09-02)
+.claude/
+CLAUDE.md
+users-guide.md
+users-guide.pdf
+data/moon-atlas-db.csv
+data/the-lunar-100-clean.csv
+data/the-lunar-100-clean-atlases.csv
+design/mockup-copernicus.html
+start_webserver.sh
+tools/
