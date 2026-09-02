@@ -2,5 +2,6 @@
 Project/
 cards/*.pdf
 design/plates/src-*
+design/plates/.trekcache/
 __pycache__/
 *.pyc

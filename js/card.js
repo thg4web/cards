@@ -173,6 +173,10 @@
       : '';
     var phTag = cd.photoTag ? '<span class="lfc-ph-tag">' + esc(cd.photoTag) + '</span>' : '';
     var credit = cd.photoCredit ? '<p class="lfc-credit">' + esc(cd.photoCredit) + '</p>' : '';
+    var subview = cd.photo2
+      ? '<div class="subview"><img src="design/plates/' + esc(cd.photo2) + '" alt="' + esc(sp[S.name]) + ', another view">' +
+        '<span>' + esc(cd.photo2Label || "Another view") + '</span></div>'
+      : '';
 
     var inner = header(sp, cd, zoneTail(cd.zone)) +
       '<div class="lfc-front-body">' +
@@ -180,7 +184,7 @@
           locImg + outlineSVG(cd.outline) + labels(cd.neighbours) + pins(cd.pins) +
           mapCredit + coordEl + globeEl +
         '</div>' +
-        '<div class="lfc-pane">' + phImg + phTag + credit + '</div>' +
+        '<div class="lfc-pane">' + phImg + phTag + subview + credit + '</div>' +
       '</div>';
     return shell(inner, cd.zone, cd.cat);
   }
