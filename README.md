@@ -35,12 +35,18 @@ Both / Front / Back toggle. Below it, a grouping strip with a
   windows, with a caption and a **Tonight** switch that highlights the phase
   for the current date.
 
-Click any card image to view it full size.
+Click any card image to view it full size. Keyboard: `←` / `→` to move,
+`F` / `B` / `D` for front / back / both, `Esc` to close an enlarged image.
+The URL tracks the current card (`index.html#L42`), so links are shareable.
+
+**[users-guide.md](users-guide.md)** is the full walkthrough of the viewer
+(also as `users-guide.pdf`).
 
 ## Layout
 
 ```
 index.html            the viewer app
+users-guide.md         full walkthrough of the viewer  (+ users-guide.pdf)
 css/card.css           the card styling (imports fonts/fonts.css)
 js/card.js             the front / back card renderer
 fonts/                 Chakra Petch · Saira Condensed · Barlow  (SIL OFL 1.1)
