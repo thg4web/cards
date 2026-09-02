@@ -1,8 +1,7 @@
 # Lunar Field Cards
 
-A deck of 100 lunar observing cards — one for each feature in Charles A. Wood's
-**Lunar 100** — in the visual language of *Cosmic Shards — Stargazing Cards:
-The Moon*.
+A deck of 100 lunar observing cards, one for each feature in Charles A. Wood's
+**Lunar 100**.
 
 Each card:
 
