@@ -1,26 +1,15 @@
 ---
-title: "Lunar Field Cards — Deck Preview User's Guide"
+title: "Lunar Field Cards — User's Guide"
 date: 2026-09-02
 status: active
-description: How to drive the local deck-preview app (index.html).
+description: How to use the Lunar Field Cards site.
 ---
 
-# Deck Preview User's Guide
+# User's Guide
 
-`index.html` is a local browser tool for reviewing the 100 Lunar Field Cards
-before print. It reads the same `data/` and `css/card.css` the print build
-uses, so what you see is what the card is.
-
-## Starting it
-
-`index.html` is self-contained. Serve the folder with any static web server
-and open it in a browser — for example:
-
-```bash
-python3 -m http.server 8002      # then open http://localhost:8002
-```
-
-Nothing is written to disk; it is a viewer only.
+The Lunar Field Cards site shows all 100 cards in the browser — front and back —
+with tools to page through them, group them by decade, lunar zone or Moon
+phase, and enlarge the imagery.
 
 ## The header bar
 
@@ -116,6 +105,6 @@ press **Esc** to close.
 
 ## Deep links
 
-The URL hash tracks the current card: `…/index.html#L42` opens straight to
-L42, and the app keeps the hash updated as you move, so a link always points at
-the card you were on.
+The URL hash tracks the current card: adding `#L42` to the site's address opens
+straight to L42, and the address updates as you move, so a copied link always
+points at the card you were on.
