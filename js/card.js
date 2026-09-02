@@ -128,17 +128,8 @@
 
   function outlineSVG(o) {
     if (!o) return '';
-    var st = ' fill="none" stroke="#e36a1e" stroke-width="1.1" style="filter:drop-shadow(0 0 2px rgba(227,106,30,.9))"';
-    var body;
-    if (o.shape === "ellipse") {
-      body = '<ellipse cx="' + o.cx + '" cy="' + o.cy + '" rx="' + o.rx + '" ry="' + o.ry + '"' +
-             (o.rot ? ' transform="rotate(' + o.rot + ' ' + o.cx + ' ' + o.cy + ')"' : '') + st + '/>';
-    } else if (o.shape === "path") {
-      body = '<path d="' + esc(o.d) + '"' + st + '/>';
-    } else {
-      body = '<circle cx="' + o.cx + '" cy="' + o.cy + '" r="' + (o.r || 2.5) + '"' + st + '/>';
-    }
-    return '<svg class="outline" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">' + body + '</svg>';
+    // a hint, not a shout: a small orange dot on the feature (o.cx / o.cy, in %)
+    return '<span class="lfc-mark" style="left:' + o.cx + '%;top:' + o.cy + '%"></span>';
   }
   function labels(list) {
     return (list || []).map(function (n) {
