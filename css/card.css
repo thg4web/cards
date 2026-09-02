@@ -19,10 +19,10 @@
   --lfc-line-strong:rgba(237,233,227,.34);
 
   /* four lunar zones (colour-coded, from the reference deck) */
-  --lfc-zone-er:#6d8299;   /* Eastern Rim */
-  --lfc-zone-eh:#8b8f98;   /* Eastern Heartland */
-  --lfc-zone-wh:#9c7f6a;   /* Western Heartland */
-  --lfc-zone-wr:#6f6862;   /* Western Rim */
+  --lfc-zone-er:#6d8299;   /* Eastern Rim — steel blue */
+  --lfc-zone-eh:#6a9068;   /* Eastern Heartland — forest green */
+  --lfc-zone-wh:#d08b7f;   /* Western Heartland — light red */
+  --lfc-zone-wr:#e9d88f;   /* Western Rim — light yellow */
 
   /* seven feature categories */
   --lfc-cat-maria:#5f6f82;
@@ -59,10 +59,11 @@
   background:linear-gradient(115deg,rgba(255,255,255,.06),transparent 22%,transparent 78%,rgba(255,255,255,.04));
 }
 
-/* zone bleed tabs, top & bottom edge */
-.lfc-bleed{position:absolute;left:50%;transform:translateX(-50%);display:flex;height:1.5cqw;z-index:4}
-.lfc-bleed.top{top:0}
-.lfc-bleed.bot{bottom:0}
+/* zone tabs, top & bottom — a pill with rounded ends that runs off the edge */
+.lfc-bleed{position:absolute;left:50%;transform:translateX(-50%);display:flex;height:4.4cqw;z-index:4;
+  border-radius:2.2cqw;overflow:hidden}
+.lfc-bleed.top{top:-2.2cqw}
+.lfc-bleed.bot{bottom:-2.2cqw}
 .lfc-bleed i{display:block;height:100%}
 .lfc-bleed .w{width:5cqw;background:var(--lfc-ink)}
 .lfc-bleed .z{width:8cqw;background:var(--zone)}

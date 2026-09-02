@@ -1763,7 +1763,7 @@ const CARDS = [
     photoCredit:"LROC WAC (LROC QuickMap / LunaServ), rendered as the Earth view. NASA / GSFC / ASU.",
     locator:"plate-L96-scene.jpg",
     locatorCredit:"LROC WAC (LROC QuickMap / LunaServ), rendered as the Earth view. NASA / GSFC / ASU.",
-    outline:{ shape:"dot", cx:50.7, cy:69.1 },
+    outline:{ shape:"dot", cx:50.7, cy:64.3 },
     description:"The old name for the rugged peaks along the Moon's south limb, now understood as part of the rim of the vast South Pole-Aitken basin on the far side. Seen in profile at favourable libration, the highest of them jut above the smooth curve of the limb as tiny teeth.",
     nameOrigin:"Named by nineteenth-century observers for Gottfried Wilhelm Leibniz; the IAU has retired the label, but observers still use it for the limb range.",
     facts:[

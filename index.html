@@ -61,8 +61,35 @@
   .st-review{background:#8fb7c4}
   .st-final{background:#5a8a5a}
 
+  .decades{
+    display:flex; flex-wrap:wrap; gap:6px; padding:10px 18px 0; background:var(--panel);
+  }
+  .decades button{
+    font-family:"Saira Condensed",system-ui,sans-serif; font-size:11px; font-weight:600;
+    text-transform:uppercase; letter-spacing:.04em; line-height:1;
+    padding:6px 12px; color:var(--muted);
+    background:transparent; border:1px solid var(--line); border-radius:999px; cursor:pointer;
+  }
+  .decades button:hover{color:var(--ink); border-color:var(--accent) !important}
+  .decades button.on{color:#160b03 !important; background:var(--accent) !important; border-color:var(--accent) !important}
+  .decades button.ph{font-size:16px; line-height:1; padding:4px 11px}
+  .decades button.todaybtn{
+    margin-left:14px; border-radius:999px; border:1px solid var(--accent);
+    color:var(--accent); background:transparent; font-size:11px; padding:6px 12px;
+  }
+  .decades button.todaybtn.on-t{background:var(--accent) !important; color:#160b03 !important}
+  .decades.today-only button:not(.today):not(.todaybtn){opacity:.28; filter:grayscale(.8)}
+  .decades button.today{outline:2px solid var(--accent); outline-offset:2px}
+
+  .groupcap{
+    padding:6px 18px 2px; background:var(--panel);
+    font-family:"Saira Condensed",system-ui,sans-serif; font-weight:600;
+    text-transform:uppercase; letter-spacing:.09em; font-size:12px; color:var(--accent);
+  }
+  .groupcap:empty{display:none}
+
   .chips{
-    display:flex; flex-wrap:wrap; gap:3px; padding:10px 18px; border-bottom:1px solid var(--line);
+    display:flex; flex-wrap:wrap; gap:3px; padding:8px 18px 10px; border-bottom:1px solid var(--line);
     background:var(--panel);
   }
   .chips button{
@@ -123,6 +150,11 @@
   <span class="title"><span class="l" id="tl">L 5</span><span id="tn">Copernicus</span></span>
   <span class="meta" id="tm"></span>
   <span class="spacer"></span>
+  <div class="toggle" id="group" title="Group the strip by decade, lunar zone, or Moon phase">
+    <b data-g="num" class="on">Num</b>
+    <b data-g="color">Color</b>
+    <b data-g="phase">Phase</b>
+  </div>
   <div class="toggle" id="view">
     <b data-v="both" class="on">Both</b>
     <b data-v="front">Front</b>
@@ -130,6 +162,8 @@
   </div>
 </header>
 
+<div class="decades" id="decades"></div>
+<div class="groupcap" id="groupcap"></div>
 <div class="chips" id="chips"></div>
 
 <main>
@@ -152,18 +186,152 @@
   var view = "both";
   var idx = 4; // L5
 
-  // build the L-number chip strip
+  // ---- grouping strip: Num (decade) / Color (lunar zone) / Phase (Moon phase) ----
+  // Num: Wood's L-order is his rough difficulty order, so each decade is a
+  //   difficulty band, tinted along the same green→amber→rust ramp as the
+  //   back-of-card difficulty slider.
+  // Color: one pill per lunar zone in that zone's own colour.
+  // Phase: four pills for the quarters of the lunation, from each card's
+  //   bestDays windows (lunar age in days). Windows near a boundary put a
+  //   card in both quarters, so the pill counts sum to more than 100.
+  // The ◀ ▶ arrows and the number box walk only the selected pill's cards.
+  var DIFF_STOPS = ["#3a5a3a","#455a3a","#50623a","#5b653a","#66693a",
+                    "#6d6639","#705b36","#735034","#774531","#7a3a2f"];
+  var ZONES = [
+    ["ER","Eastern Rim","#6d8299"], ["EH","Eastern Heartland","#6a9068"],
+    ["WH","Western Heartland","#d08b7f"], ["WR","Western Rim","#e9d88f"]
+  ];
+  // seven observable phases across the ~29.5-day lunation (age in days) —
+  // New is dropped (nothing to see); the waxing-crescent pill absorbs those
+  // days. Labelled with the Moon-phase glyphs; tint tracks the lit fraction.
+  var PHASES = [
+    { n:1, lo:0,  hi:7,  glyph:"🌒", tint:"#5c5a54", label:"Waxing Crescent" },
+    { n:2, lo:7,  hi:11, glyph:"🌓", tint:"#8f8d84", label:"First Quarter" },
+    { n:3, lo:11, hi:15, glyph:"🌔", tint:"#bdb9ac", label:"Waxing Gibbous" },
+    { n:4, lo:15, hi:18, glyph:"🌕", tint:"#e2ddcf", label:"Full" },
+    { n:5, lo:18, hi:22, glyph:"🌖", tint:"#b4b6ac", label:"Waning Gibbous" },
+    { n:6, lo:22, hi:26, glyph:"🌗", tint:"#87897f", label:"Last Quarter" },
+    { n:7, lo:26, hi:30, glyph:"🌘", tint:"#565853", label:"Waning Crescent" }
+  ];
+
+  // tonight's Moon: age in days since a known new moon, then the matching pill
+  function moonAge(date) {
+    var SYN = 29.530588853, EPOCH = Date.UTC(2000, 0, 6, 18, 14, 0);
+    var a = ((date.getTime() - EPOCH) / 86400000) % SYN;
+    return a < 0 ? a + SYN : a;
+  }
+  function phaseForAge(age) {
+    for (var i = 0; i < PHASES.length; i++)
+      if (age >= PHASES[i].lo && age < PHASES[i].hi) return PHASES[i].n;
+    return PHASES[PHASES.length - 1].n;
+  }
+  var TODAY_AGE = moonAge(new Date());
+  var TODAY_PHASE = phaseForAge(TODAY_AGE);
+  var todayOnly = false;                 // "Tonight" switch (phase mode only)
+
+  function range(a, b) { var r = []; for (var i = a; i < b; i++) r.push(i); return r; }
+
+  var ZONE_IDX = { ER:[], EH:[], WH:[], WR:[] };
+  var PHASE_IDX = {};
+  PHASES.forEach(function (p) { PHASE_IDX[p.n] = []; });
   IDS.forEach(function (id, i) {
-    var g = LFC.get(id);
-    var b = document.createElement("button");
-    b.textContent = g.spine[0];
-    b.title = g.spine[3];
-    var dot = document.createElement("i");
-    dot.className = "st-" + (g.card.status || "stub");
-    b.appendChild(dot);
-    b.addEventListener("click", function () { idx = i; render(); });
-    chips.appendChild(b);
+    var cd = LFC.get(id).card;
+    if (ZONE_IDX[cd.zone]) ZONE_IDX[cd.zone].push(i);
+    var wins = cd.bestDays || [];
+    PHASES.forEach(function (p) {
+      var hit = wins.some(function (w) { return w[0] <= p.hi && w[1] >= p.lo; });
+      if (hit) PHASE_IDX[p.n].push(i);
+    });
   });
+
+  // groupsFor(mode) -> [{ key, label, tint, title, list(global indices) }]
+  function groupsFor(mode) {
+    if (mode === "color") return ZONES.map(function (z) {
+      return { key:z[0], label:z[1], tint:z[2],
+               title:z[1] + " · " + ZONE_IDX[z[0]].length + " cards",
+               list:ZONE_IDX[z[0]].slice() };
+    });
+    if (mode === "phase") return PHASES.map(function (p) {
+      return { key:p.n, label:p.glyph, name:p.label, tint:p.tint,
+               title:p.label + " · " + PHASE_IDX[p.n].length + " cards",
+               list:PHASE_IDX[p.n].slice() };
+    });
+    var out = [];                        // "num"
+    for (var d = 0; d < 10; d++) out.push({
+      key:d, label:(d*10+1) + "–" + (d*10+10), tint:DIFF_STOPS[d],
+      title:"L" + (d*10+1) + "–" + (d*10+10) + " · " +
+            (d < 4 ? "easier" : d < 7 ? "moderate" : "harder"),
+      list:range(d*10, Math.min(d*10+10, IDS.length))
+    });
+    return out;
+  }
+
+  var decEl = document.getElementById("decades");
+  var groupMode = "num";
+  var activeKey = null;                  // decade # / zone code / phase #
+  var curList = [];                      // global indices the arrows + jump box walk
+  var chipsKey = "";                     // last built strip signature
+
+  function buildGroups() {
+    decEl.innerHTML = "";
+    groupsFor(groupMode).forEach(function (gr) {
+      var p = document.createElement("button");
+      p.textContent = gr.label;
+      p.title = gr.title;
+      if (groupMode === "phase") p.className = "ph";
+      p.dataset.c = gr.tint;
+      p.dataset.k = gr.key;
+      p.addEventListener("click", function () {
+        if (!gr.list.length) return;
+        todayOnly = false;
+        activeKey = gr.key; idx = gr.list[0]; render();
+      });
+      decEl.appendChild(p);
+    });
+    if (groupMode === "phase") {
+      var ph = PHASES[TODAY_PHASE - 1];
+      var t = document.createElement("button");
+      t.className = "todaybtn";
+      t.textContent = "Tonight " + ph.glyph;
+      t.title = "Tonight's Moon — " + ph.label + " (age " + TODAY_AGE.toFixed(1) +
+                " d). Toggle to isolate that phase.";
+      t.addEventListener("click", function () {
+        todayOnly = !todayOnly;
+        if (todayOnly && PHASE_IDX[TODAY_PHASE].length) {
+          activeKey = TODAY_PHASE; idx = PHASE_IDX[TODAY_PHASE][0];
+        }
+        render();
+      });
+      decEl.appendChild(t);
+    }
+  }
+
+  function buildChips(list) {            // list = global IDS indices
+    chips.innerHTML = "";
+    list.forEach(function (i) {
+      var g = LFC.get(IDS[i]);
+      var b = document.createElement("button");
+      b.textContent = g.spine[0];
+      b.title = g.spine[3];
+      var dot = document.createElement("i");
+      dot.className = "st-" + (g.card.status || "stub");
+      b.appendChild(dot);
+      b._i = i;
+      b.addEventListener("click", function () { idx = i; render(); });
+      chips.appendChild(b);
+    });
+  }
+
+  // move within the selected pill's list, wrapping at its ends
+  function step(delta) {
+    if (!curList.length) return;
+    var pos = curList.indexOf(idx);
+    if (pos < 0) { idx = curList[0]; render(); return; }
+    idx = curList[(pos + delta + curList.length) % curList.length];
+    render();
+  }
+
+  buildGroups();
 
   function render() {
     if (idx < 0) idx = IDS.length - 1;
@@ -178,12 +346,50 @@
     document.getElementById("tm").innerHTML = zoneName + " · " + catName +
       ' · dSeed ' + g.card.dSeed +
       '<span class="status-dot st-' + (g.card.status || "stub") + '"></span>' + (g.card.status || "stub");
-    jump.value = g.spine[0];
     location.hash = id;
 
-    Array.prototype.forEach.call(chips.children, function (c, i) {
-      c.classList.toggle("on", i === idx);
+    // pick the active pill: keep the current selection if it still holds the
+    // card, else fall back to a pill that contains it
+    var groups = groupsFor(groupMode), gr = null, i;
+    for (i = 0; i < groups.length; i++)
+      if (String(groups[i].key) === String(activeKey)) gr = groups[i];
+    if (!gr || gr.list.indexOf(idx) < 0) {
+      for (i = 0; i < groups.length; i++)
+        if (groups[i].list.indexOf(idx) >= 0) { gr = groups[i]; break; }
+      if (!gr) gr = groups[0];
+    }
+    activeKey = gr.key;
+    curList = gr.list;
+    document.getElementById("groupcap").textContent =
+      groupMode === "phase"
+        ? (gr.name + " · day " + PHASES[gr.key - 1].lo + "–" + PHASES[gr.key - 1].hi +
+           (todayOnly ? "  ·  TONIGHT" : ""))
+        : "";
+
+    if (chipsKey !== groupMode + ":" + activeKey) {
+      chipsKey = groupMode + ":" + activeKey;
+      buildChips(curList);
+    }
+    Array.prototype.forEach.call(decEl.children, function (c) {
+      if (c.classList.contains("todaybtn")) { c.classList.toggle("on-t", todayOnly); return; }
+      var on = String(c.dataset.k) === String(activeKey);
+      c.classList.toggle("on", on);
+      c.classList.toggle("today", groupMode === "phase" && todayOnly &&
+                         String(c.dataset.k) === String(TODAY_PHASE));
+      c.style.borderColor = on ? "" : c.dataset.c;
+      c.style.background = on ? "" : c.dataset.c + "26";
+      c.style.color = on ? "" : "#cfc9bf";
     });
+    decEl.classList.toggle("today-only", groupMode === "phase" && todayOnly);
+    Array.prototype.forEach.call(chips.children, function (c) {
+      c.classList.toggle("on", c._i === idx);
+    });
+
+    // the number box spans only the selected pill
+    var lnums = curList.map(function (k) { return LFC.get(IDS[k]).spine[0]; });
+    jump.min = Math.min.apply(null, lnums);
+    jump.max = Math.max.apply(null, lnums);
+    jump.value = g.spine[0];
 
     var slots = [];
     if (view === "both" || view === "front")
@@ -193,11 +399,18 @@
     stage.innerHTML = slots.join("");
   }
 
-  document.getElementById("prev").addEventListener("click", function () { idx--; render(); });
-  document.getElementById("next").addEventListener("click", function () { idx++; render(); });
+  document.getElementById("prev").addEventListener("click", function () { step(-1); });
+  document.getElementById("next").addEventListener("click", function () { step(1); });
   jump.addEventListener("change", function () {
     var n = parseInt(jump.value, 10);
-    if (n >= 1 && n <= IDS.length) { idx = n - 1; render(); }
+    if (isNaN(n) || !curList.length) { jump.value = LFC.get(IDS[idx]).spine[0]; return; }
+    // snap to the nearest L that is actually in the selected pill
+    var best = curList[0], bd = Infinity;
+    curList.forEach(function (k) {
+      var d = Math.abs(LFC.get(IDS[k]).spine[0] - n);
+      if (d < bd) { bd = d; best = k; }
+    });
+    idx = best; render();
   });
   document.getElementById("view").addEventListener("click", function (e) {
     var b = e.target.closest("b[data-v]"); if (!b) return;
@@ -205,10 +418,18 @@
     Array.prototype.forEach.call(this.children, function (c) { c.classList.toggle("on", c === b); });
     render();
   });
+  document.getElementById("group").addEventListener("click", function (e) {
+    var b = e.target.closest("b[data-g]"); if (!b || b.dataset.g === groupMode) return;
+    groupMode = b.dataset.g;
+    Array.prototype.forEach.call(this.children, function (c) { c.classList.toggle("on", c === b); });
+    activeKey = null; chipsKey = ""; todayOnly = false;
+    buildGroups();
+    render();
+  });
   window.addEventListener("keydown", function (e) {
     if (e.target.tagName === "INPUT") return;
-    if (e.key === "ArrowLeft") { idx--; render(); }
-    else if (e.key === "ArrowRight") { idx++; render(); }
+    if (e.key === "ArrowLeft") { step(-1); }
+    else if (e.key === "ArrowRight") { step(1); }
     else if (e.key.toLowerCase() === "f") { view = "front"; syncToggle(); render(); }
     else if (e.key.toLowerCase() === "b") { view = "back"; syncToggle(); render(); }
     else if (e.key.toLowerCase() === "d") { view = "both"; syncToggle(); render(); }

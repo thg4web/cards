@@ -16,7 +16,8 @@ Colour-coded by **lunar zone** (four), badged by **feature category** (seven).
 ## Layout
 
 ```
-index.html                 local deck-preview app (nav, L-number strip, front/back)
+index.html                 local deck-preview app (grouping strip, front/back, enlarge)
+users-guide.md             how to drive the preview app  (+ users-guide.pdf)
 css/card.css               the card system (imports fonts/fonts.css)
 js/card.js                 data-driven front/back renderer (LFC.renderCard)
 fonts/                     Chakra Petch · Saira Condensed · Barlow  (SIL OFL)
@@ -38,6 +39,24 @@ cards/                     generated card / deck PDFs (git-ignored)
 ```bash
 ./start_webserver.sh      # http://localhost:8002  (index.html)
 ```
+
+## Preview app
+
+`index.html` is a local browser tool for reviewing the deck. Header: prev/next
+and a number box (both scoped to the selected pill), and a Both/Front/Back
+toggle. Below it a grouping strip with a `Num · Color · Phase` switch —
+
+- **Num** — ten decade pills (`1–10` … `91–100`), tinted along the difficulty
+  ramp (Wood's L-order is his difficulty order).
+- **Color** — four pills, one per lunar zone in that zone's colour
+  (ER steel blue, EH forest green, WH light red, WR light yellow), filtering
+  the strip to that zone.
+- **Phase** — seven Moon-phase glyph pills (🌒 → 🌘) built from each card's
+  best-days windows by lunar age, a caption naming the selected phase, and a
+  **Tonight** switch that isolates the current phase from today's date.
+
+Click any card image — locator, close-up, or the "Another view" inset — to see
+it full size. Full walkthrough in `users-guide.md`.
 
 ## Status
 
