@@ -107,14 +107,17 @@
 .lfc-pane canvas,.lfc-pane .plate{position:absolute;inset:0;width:100%;height:100%;display:block}
 .lfc-pane .plate{object-fit:cover}
 
-/* on a ringed locator map the plate is context, not the subject: dim it so the
-   ring and the text furniture read against it (concept cards L1-L3 have no ring
-   and keep their scene at full brightness) */
-.lfc-locator:has(svg.outline) .plate{filter:brightness(.5) saturate(.78) contrast(1.02)}
-.lfc-locator:has(svg.outline)::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
-  background:radial-gradient(120% 90% at 50% 45%,rgba(6,5,4,0) 38%,rgba(6,5,4,.6) 100%)}
-.lfc-locator .lbl,.lfc-locator .pin,.lfc-locator svg.outline,
+/* the locator plate is shown at full brightness; only the dot and the text
+   furniture (coords chip, credit pill, labels) carry their own backing */
+.lfc-locator .lbl,.lfc-locator .pin,.lfc-locator .lfc-mark,
 .lfc-locator .lfc-coords,.lfc-locator .lfc-map-credit,.lfc-locator .lfc-globe{z-index:2}
+
+/* the feature marker: a small orange dot with a dark halo so it holds on any terrain */
+.lfc-locator .lfc-mark{
+  position:absolute; width:1cqw; height:1cqw; margin:-.5cqw 0 0 -.5cqw;
+  border-radius:50%; background:var(--lfc-accent); pointer-events:none;
+  box-shadow:0 0 0 .2cqw rgba(10,8,6,.6), 0 0 3px rgba(0,0,0,.75);
+}
 
 .lfc-locator .lbl{position:absolute;font-family:var(--lfc-cond);text-transform:uppercase;font-weight:600;
   font-size:1.35cqw;letter-spacing:.05em;color:#e9e4da;white-space:nowrap;
@@ -124,7 +127,6 @@
 .lfc-locator .pin{position:absolute;width:0;height:0;border-left:.7cqw solid transparent;
   border-right:.7cqw solid transparent;border-bottom:1.1cqw solid var(--lfc-accent);
   filter:drop-shadow(0 1px 2px #000)}
-.lfc-locator svg.outline{position:absolute;inset:0;width:100%;height:100%}
 
 .lfc-coords{position:absolute;left:0;bottom:0;background:rgba(8,6,4,.84);color:var(--lfc-accent);
   border-top:2px solid var(--lfc-accent);

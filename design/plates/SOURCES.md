@@ -131,21 +131,35 @@ telescope shows from Earth.
 **src-tycho-lro-centralpeak.jpg** (not used) — `File:LRO Tycho Central Peak.jpg`,
 the LRO NAC sunrise oblique. Kept as a candidate for an "Another view" inset.
 
-## L7 · Altai Scarp
+## L7 · Altai Scarp  (both panels re-pulled from LunaServ, 2026-09-02)
 
-**plate-L7-scene.jpg** (left / zoomed-out panel) ← `src-l7-scene-nectaris-lro.png`
-- The whole Mare Nectaris basin; Rupes Altai is its southwestern ring. LROC WAC.
-  Credit: NASA / GSFC / ASU.
-- Commons: `File:Mare Nectaris (LRO).png` (2750 × 2750, `PD-USGov-NASA` family)
-- Processing: resized to 1400 × 1400, JPEG q82.
+**plate-L7-scene.jpg** (left / locator) and **plate-L7-photo.jpg** (right / close-up)
+← LROC QuickMap / LunaServ WMS, layer `luna_wac_global` (see the L20–L25 note
+below for the method). Centred on the scarp mid-arc (23.5°S, 24.5°E).
 
-**plate-L7-photo.jpg** (right / close-up panel) ← `src-altai-lroc-wac.jpg`
-- LROC Wide Angle Camera view of the full arc of Rupes Altai. Credit: NASA / GSFC / ASU.
-- Commons: `File:Rupes Altai - LROC - WAC.JPG`
-- Processing: resized to 1200 px wide, centre-cropped to 1200 × 1350.
-- ⚠️ **Has burned-in white labels** (Catharina, Fermat, Pons, Polybius, Rupes
-  Altai, etc). The `- LROC - WAC.JPG` Commons set is an annotated atlas. No clean
-  dedicated Altai view found yet; replace this panel with an unlabelled crop.
+- Locator: 40° latitude field — Mare Nectaris (dark, NE) with Rupes Altai
+  arcing round its southwest rim; ring `rx/ry 12`.
+- Close-up: 13° field, framed to show the whole ~425 km arc of the scarp rather
+  than one segment (the scarp's shape is its signature, and it is too subtle at
+  moderate sun for a tight face view to read). `-normalize -sigmoidal-contrast
+  3x48%`.
+- Credit: LROC WAC global mosaic, 100 m/px, via LROC QuickMap / LunaServ. NASA / GSFC / ASU.
+- **Fixes the earlier bug:** the old right panel was `File:Rupes Altai - LROC - WAC.JPG`
+  from the annotated `- LROC - WAC.JPG` Commons atlas set, which has burned-in
+  white labels (Catharina, Fermat, Rupes Altai, …). Now unlabelled.
+- Note: like all of Rupes Altai from an orthomosaic, this is honest but not
+  dramatic; the scarp really comes alive only near the day 5–7 terminator.
+
+**plate-L7-photo2.jpg** ("Another view" inset, label "At sunrise")
+← `src-l7-photo2-altai-terminator.png`
+- **Aaron's own telescopic image** of Rupes Altai at the terminator: the scarp
+  arc catching first light, deep shadow behind it, Piccolomini at the southern
+  end. This is the dramatic low-sun look the orthomosaic cannot give.
+- Credit: Aaron Henderson, THG Media.
+- Processing: 4:3 crop `2100×1575+405+595` from the 2777 × 3434 original
+  (settled between a too-far-south and a too-far-north attempt, per Aaron),
+  resized to 1200 × 900, mild `-brightness-contrast 2x4`, quality 88. His
+  natural tone kept (not desaturated).
 
 ## L8 · Theophilus, Cyrillus, Catharina
 
@@ -181,26 +195,29 @@ Apollo 16 oblique on Orion's approach. Kept as an "Another view" candidate.
 - Commons: `File:Lunar Orbiter 4 FRAME 4107 M p13.png`
 - Processing: reduced to 8-bit, resized to 1300 px wide, centre-cropped to 1300 × 1300.
 
-## L10 · Mare Crisium
+## L10 · Mare Crisium  (both panels, Earth-view render from LunaServ, 2026-09-02)
 
-**plate-L10-scene.jpg** (left / scene panel) ← `src-l10-scene-crisium.png`
-- Telescopic near-limb view of a large circular basin with a raised highland
-  ring, the lunar edge running down the right side. 397 × 525 source
-  (low resolution; fine for screen, soft for print).
-- Supplied by Aaron from `/Volumes/Starfish_Backup/moon-field-card/`.
-  **Attribution / licence not verified.**
-- **Identification to confirm:** the floor reads lighter and greyer than a
-  classic dark mare, so this may not be Mare Crisium (could be Mare
-  Humboldtianum or another limb basin). The isolated circular form at the limb
-  does fit Crisium under low sun / high libration.
-- Processing: resized to 1000 px wide, EXIF stripped, JPEG q82.
+Both panels rebuilt as the **Earth / telescope view**, per Aaron: these are
+observing cards, and the Moon is never seen from directly overhead. Method:
+LunaServ WMS (`wms.im-ldi.com`, the LROC QuickMap engine), layer
+`luna_wac_global`, **orthographic** projection
+(`SRS=AUTO:42003,9001,<lon0>,<lat0>`) centred on a favourable-libration
+sub-observer point (7°E, 5°N for Crisium). BBOX in projection metres on the
+PROJ default sphere (radius 6 378 137). Feature projected coordinates computed
+and the window cropped to them; `-normalize -level …,1.3 -sigmoidal-contrast`.
 
-**plate-L10-photo.jpg** (right / close-up panel) ← `src-crisium-as17.jpg`
-- Mare Crisium, Apollo 17 mapping-camera mosaic, 1972. Credit: NASA.
-- Commons: `File:Mare Crisium AS17-M-0913-0919-0924.jpg`
-- Processing: resized to 1500 px wide.
-- Still flagged: the source is a wide, short mosaic strip (1768 × 543) and
-  letterboxes in the panel. Needs a squarer frame or an original capture.
+- **plate-L10-photo.jpg** (right): ~1 500 km window on Mare Crisium — the
+  foreshortened oval near the eastern limb, highland ring, floor wrinkle
+  ridges, Picard and Peirce, the lunar edge curving down the right. The card's
+  own description already notes this foreshortening; now the image matches.
+- **plate-L10-scene.jpg** (left): wider Earth-view of the eastern near side,
+  crop centred at projected `(4.4M, 1.5M)` so Crisium sits near centre with the
+  limb curving down the right against **black sky** (WMS `BGCOLOR=0x000000` on
+  both panels). `-gamma 1.5 -sigmoidal-contrast 1.4x38%`. Crisium ringed
+  (`outline cx:56 cy:48 rx:6 ry:8`, drawn 2× loose by the renderer). Replaces
+  Aaron's low-res supplied image and retires its identity-check flag.
+- Credit: LROC WAC (LROC QuickMap / LunaServ), rendered as the Earth view. NASA / GSFC / ASU.
+- Retires the letterboxed Apollo 17 mapping strip that was on the right.
 
 ---
 
@@ -210,6 +227,17 @@ LEFT panel = wide finder field; RIGHT panel = narrow eyepiece detail. All
 public-domain (NASA / LROC / Lunar Orbiter / Apollo). The Commons
 `… - LROC - WAC.JPG` atlas set was avoided where possible: it carries burned-in
 labels. Prose for these cards is not yet written.
+
+> **Superseded for L11–L19 (2026-09-02).** All of L11–L19, both panels, were
+> rebuilt as the **Earth / telescope view** by `tools/build-plates-lunaserv.py`
+> (see the L20–L25 section for the method: LunaServ `luna_wac_global`,
+> orthographic `AUTO:42003` centred on a favourable-libration sub-observer
+> point, black sky, then gamma/contrast). Locator = 44° field (crop eased ~15%
+> toward disc centre), feature marked with an orange dot (`outline.cx/cy`);
+> close-up = per-feature 3–20° field centred on the feature. Credits set to
+> "LROC WAC (LROC QuickMap / LunaServ), rendered as the Earth view.
+> NASA / GSFC / ASU." The per-card notes below describe the earlier
+> public-domain plates and no longer match what ships.
 
 ## L9 · Clavius  (left panel = VMA locator, 2026-09-01)
 
@@ -300,6 +328,16 @@ flag for a distinct narrow view later.
 
 ## L16–L100 · left (locator) panels — VMA base map, batch 2026-09-01
 
+> **Superseded (2026-09-02): all of L7, L10, L11–L100** rebuilt, both panels, as
+> the **Earth / telescope view** by `tools/build-plates-lunaserv.py`
+> (orthographic `AUTO:42003` from LunaServ `luna_wac_global`,
+> favourable-libration sub-observer point, black sky, orange dot on the
+> locator; locator 44° field, close-up per-feature 3–38°). Limb and polar
+> features (Orientale, Peary, Drygalski, Leibnitz Mtns, Australe,
+> Humboldtianum, Smythii, Humboldt, Inghirami, Marginis) render as the
+> foreshortened limb slivers against black that they actually are from Earth.
+> The nadir VMA / Trek description below now applies only to **L9**.
+
 `plate-L16-scene.jpg` … `plate-L100-scene.jpg` (85 files) generated by
 `tools/build-locator-plates.py 16 100`, each a crop of `src-moonbase-wac.jpg`
 (the assembled Virtual Moon Atlas `WAC_LOWSUN` near-side map — see the L9 entry).
@@ -337,6 +375,26 @@ flag for a distinct narrow view later.
 - Big basins (L80 Orientale 930 km, L95 Procellarum ~2500 km, L54/L73/L77) are
   capped at a 9° field, so the close-up shows the centre, not the full ring
   system.
+
+## L20–L25 · both panels re-pulled from LROC QuickMap / LunaServ, 2026-09-02
+
+`plate-L20..L25-{scene,photo}.jpg` rebuilt by `tools/build-plates-lunaserv.py`.
+
+- Source: **`luna_wac_global`** ("LROC WAC Global 100 m/px"), served by the
+  **LunaServ WMS** at `https://wms.im-ldi.com/` — the map engine behind LROC
+  QuickMap (Space Exploration Resources / ASU). NASA / GSFC / Arizona State
+  University; public domain.
+- Direct `EPSG:4326` `GetMap` per panel, longitude span widened by 1/cos(lat)
+  so the feature reads round; `-normalize -sigmoidal-contrast 3x48%`, quality 88.
+  Locator panels 1100 × 1040 at a 40° latitude field; close-ups 1400 × 1050 at a
+  per-feature field (2–7.5°). Raw fetches cached as `src-l2x-*-lunaserv.jpg`
+  (git-ignored).
+- `data/cards.js` for these six: `locatorCredit` / `photoCredit` set to
+  "LROC WAC global mosaic, 100 m/px, via LROC QuickMap / LunaServ. NASA / GSFC / ASU.",
+  `outline` ring re-sized to the new field.
+- Noticeably sharper and better-toned than the NASA Trek pulls. LunaServ also
+  serves polar-stereographic and per-point orthographic projections, so it is
+  the intended fix for the 3 polar close-ups and the rough limb locators.
 
 ---
 

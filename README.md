@@ -26,8 +26,10 @@ data/moon-atlas-db.csv     Rükl / 21st-Century atlas cross-reference
 design/mockup-copernicus.html   the approved look (L 5 · Copernicus, front + back)
 design/plates/             processed plates (plate-L*-{scene,photo}.jpg) + SOURCES.md
                            src-* originals and .trekcache/ are git-ignored
-tools/                     build-moonbase.sh · build-locator-plates.py ·
-                           build-closeup-plates.py · fill-prose-21-100.py
+tools/                     build-plates-lunaserv.py  (the Earth-view panel builder) ·
+                           fill-prose-21-100.py  (one-shot prose) ·
+                           build-moonbase.sh / build-locator-plates.py /
+                           build-closeup-plates.py  (earlier nadir pipeline, kept)
 cards/                     generated card / deck PDFs (git-ignored)
 ```
 
@@ -42,11 +44,18 @@ cards/                     generated card / deck PDFs (git-ignored)
 Content draft (2026-09-02). Scaffold, data schema, and the data-driven renderer
 are done. **All 100 cards are `status:"draft"`** — full prose (epoch, size,
 best days, description, name origin, facts, tips) and per-card difficulty.
-Imagery is in: left locator panels for L9 + L16–L100 are crops of one Virtual
-Moon Atlas base map with the feature ringed; right close-ups for L16–L100 come
-from the LRO LROC WAC global mosaic; L1–L15 keep bespoke panels.
-Open: an accuracy / ephemeris review of the prose, a polar-projection source for
-3 polar close-ups and 11 rough limb locators, then the print proof.
+
+**Imagery — the Earth / telescope view.** These are observing cards, so both
+panels are rendered as the Moon is actually seen from the ground: LROC WAC
+imagery (via LROC QuickMap's LunaServ engine) in an orthographic projection
+centred on a favourable-libration sub-observer point, off-disc sky black, the
+feature marked on the locator with a small orange dot
+(`tools/build-plates-lunaserv.py`). Limb and polar features come out as the
+foreshortened slivers you'd really see. All of L7 and L10–L100 are on this
+pipeline; L1–L6, L8 use bespoke scenes and L9 is the last nadir straggler.
+Where Aaron has an original capture it goes in the "Another view" inset (L5, L7).
+
+Open: an accuracy / ephemeris review of the prose, then the print proof.
 See `Project/docs/design-brief.md` and `Project/docs/card-data-schema.md`.
 
 ## Licence

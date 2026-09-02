@@ -91,6 +91,24 @@
     font-family:"Saira Condensed",system-ui,sans-serif; letter-spacing:.05em; text-transform:uppercase;
   }
   @media (max-width:720px){ .bar .brand{width:100%} }
+
+  /* click any card image to see it full size */
+  #stage img{cursor:zoom-in}
+  .lightbox{
+    position:fixed; inset:0; z-index:999; display:none;
+    align-items:center; justify-content:center; overflow:auto;
+    background:rgba(6,6,8,.94); cursor:zoom-out; padding:2vmin;
+  }
+  .lightbox.on{display:flex}
+  .lightbox img{
+    max-width:96vw; max-height:96vh; object-fit:contain;
+    box-shadow:0 10px 50px rgba(0,0,0,.7); cursor:zoom-in;
+  }
+  .lightbox img.full{max-width:none; max-height:none; object-fit:none; cursor:zoom-out}
+  .lightbox .lx-close{
+    position:fixed; top:12px; right:18px; color:#e6e2d8;
+    font:600 26px/1 system-ui,sans-serif; background:none; border:0; cursor:pointer;
+  }
 </style>
 </head>
 <body>
@@ -116,8 +134,10 @@
 
 <main>
   <div class="stage" id="stage"></div>
-  <p class="hint">← → to move &nbsp;·&nbsp; F / B to flip &nbsp;·&nbsp; deep-link with #L5</p>
+  <p class="hint">← → to move &nbsp;·&nbsp; F / B to flip &nbsp;·&nbsp; click an image for full size &nbsp;·&nbsp; deep-link with #L5</p>
 </main>
+
+<div class="lightbox" id="lightbox"><button class="lx-close" aria-label="Close">✕</button><img alt="Full-size plate"></div>
 
 <script src="data/lunar100.js"></script>
 <script src="data/cards.js"></script>
@@ -198,6 +218,28 @@
       c.classList.toggle("on", c.dataset.v === view);
     });
   }
+
+  // lightbox: click any plate (locator, close-up, or the inset) to see it full
+  var lb = document.getElementById("lightbox");
+  var lbImg = lb.querySelector("img");
+  function closeLb() { lb.classList.remove("on"); lbImg.classList.remove("full"); lbImg.removeAttribute("src"); }
+  stage.addEventListener("click", function (e) {
+    var img = null;
+    var sub = e.target.closest && e.target.closest(".subview");
+    if (sub) img = sub.querySelector("img");
+    else if (e.target.tagName === "IMG") img = e.target;
+    else {
+      var pane = e.target.closest && e.target.closest(".lfc-pane");
+      if (pane) img = pane.querySelector("img.plate");
+    }
+    if (!img || !img.src) return;
+    lbImg.classList.remove("full");
+    lbImg.src = img.currentSrc || img.src;
+    lb.classList.add("on");
+  });
+  lbImg.addEventListener("click", function (e) { e.stopPropagation(); lbImg.classList.toggle("full"); });
+  lb.addEventListener("click", closeLb);
+  window.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
 
   var h = (location.hash || "").replace("#", "").toUpperCase();
   var hi = IDS.indexOf(h);
