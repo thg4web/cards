@@ -42,8 +42,8 @@ const CARDS = [
     locator:"plate-L2-scene.jpg",
     locatorCredit:"",
     photo:"plate-L2-photo.jpg",
-    photoTag:"",
-    photoCredit:"",
+    photoTag:"THG · Seestar S30 Pro",
+    photoCredit:"Earthshine on a waning crescent, the whole disc lit by Earthlight. Telescopic image by Aaron Henderson, THG Media, 7 Sept 2026.",
     description:"The soft grey light that fills the unlit part of a thin crescent Moon, the “old Moon in the new Moon’s arms.” Sunlight bounces off Earth, mostly off clouds and ocean, onto the lunar night side, and a little of it comes back to us. It is strongest within two or three days of new Moon and fades fast as the crescent thickens.",
     nameOrigin:"A plain description of the mechanism. Leonardo da Vinci worked out the cause around 1510, so it is also called da Vinci glow.",
     facts:[

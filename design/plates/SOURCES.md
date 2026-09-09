@@ -42,12 +42,17 @@ Batch-1 Apollo 12 plate replaced 2026-09-01 with two Aaron-supplied images.
   for screen preview, not for the print PDF. Needs a larger version.
 - Processing: resized to 1000 px wide, EXIF stripped, JPEG q82.
 
-**plate-L2-photo.jpg** (right / close-up panel) ← `src-l2-earthshine-crescent.png`
-- Telescopic crescent Moon with strong earthshine, whole disc visible in ashen
-  light, bright sunlit limb. 1110 × 1043 source.
-- Supplied by Aaron from `(private archive)/`.
-  **Attribution / licence not verified.**
-- Processing: resized to 1400 px wide, JPEG q82.
+**plate-L2-photo.jpg** (right / close-up panel) ← `src-l2-earthshine-2026-09-07.jpg`
+- Telescopic waning crescent with the whole disc visible in Earthlight, bright
+  sunlit limb along the bottom. Overexposed to bring the earthshine up.
+- **Aaron Henderson / THG Media.** Seestar S30 Pro Tele (IMX585), on-mount video
+  stack, Raleigh NC, 2026-09-07 06:27 local. Licence **CC BY-NC 4.0**. THG owns
+  the copyright — no third-party attribution needed.
+- Master: `(private archive)/Video_Stacked_Lunar_20260907-062727.jpg`
+  (1080 × 1920). Also published as `earthshine-2026-09-07` on images.thgnetworks.com.
+- Processing: cropped to 1080 × 1068 (full width, centred band — same crop as the
+  gallery version), EXIF stripped, JPEG q88. Native 1080 px wide: fine for screen,
+  a little under ideal for the 300 dpi print pass — reprocess from the `.fit` then.
 
 ## L3 · Mare / highland dichotomy
 
