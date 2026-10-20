@@ -3,7 +3,7 @@
 // Merged onto data/lunar100.js by `id` at load time. Spine fields
 // (name, significance, diamKm, lat, lon, rukl, stAtlas) are NOT repeated here.
 //
-// Full record -- see Project/docs/card-data-schema.md:
+// Full record -- see project/docs/card-data-schema.md:
 //   id       "L5"                        spine key
 //   zone     "EL"|"EI"|"WI"|"WL"|""      lunar zone tab            (schema section 3)
 //   cat      maria|crater|valley|special|ridge|mtn|volc            (schema section 4)

@@ -20,7 +20,7 @@ Processing tool: ImageMagick 7. Common steps: `-colorspace sRGB -strip
 **plate-L1-scene.jpg** (left / scene panel) ← `src-l1-scene-moon-mountains.jpg`
 - Full Moon rising over a snow-lit mountain ridge at sunset. A concept card, so
   the left panel carries an evocative scene instead of a locator map.
-- Supplied by Aaron from `(private archive)/`
+- Supplied by Aaron (private archive)
   (filename marked "no-copyright"). **Attribution / licence not yet verified —
   confirm origin before the deck ships.**
 - Processing: resized to 1000 px wide, EXIF stripped, JPEG q82.
@@ -36,7 +36,7 @@ Batch-1 Apollo 12 plate replaced 2026-09-01 with two Aaron-supplied images.
 
 **plate-L2-scene.jpg** (left / scene panel) ← `src-l2-scene-crescent-trees.jpeg`
 - Twilight crescent Moon low over a tree-line horizon, orange-to-blue sky.
-- Supplied by Aaron from `(private archive)/`.
+- Supplied by Aaron (private archive).
   **Attribution / licence not verified** (same open question as L1).
 - **Low resolution: source is only 276 × 478 px.** Upscaled for the panel; fine
   for screen preview, not for the print PDF. Needs a larger version.
@@ -48,7 +48,7 @@ Batch-1 Apollo 12 plate replaced 2026-09-01 with two Aaron-supplied images.
 - **Aaron Henderson / THG Media.** Seestar S30 Pro Tele (IMX585), on-mount video
   stack, Raleigh NC, 2026-09-07 06:27 local. Licence **CC BY-NC 4.0**. THG owns
   the copyright — no third-party attribution needed.
-- Master: `(private archive)/Video_Stacked_Lunar_20260907-062727.jpg`
+- Master: `Video_Stacked_Lunar_20260907-062727.jpg` (private archive)
   (1080 × 1920). Also published as `earthshine-2026-09-07` on images.thgnetworks.com.
 - Processing: cropped to 1080 × 1068 (full width, centred band — same crop as the
   gallery version), EXIF stripped, JPEG q88. Native 1080 px wide: fine for screen,
@@ -63,7 +63,7 @@ the near/far two-up the right.
 - Telescopic waning-gibbous Moon with two rings drawn on it: one over a smooth
   mare, one over the cratered southern highlands, showing the dichotomy in a
   single scope view. 700 × 887 source.
-- Supplied by Aaron from `(private archive)/`.
+- Supplied by Aaron (private archive).
   **Attribution / licence not verified** (same open question as L1).
 - Processing: resized to 1200 px wide, JPEG q82.
 
@@ -77,7 +77,7 @@ the near/far two-up the right.
 **plate-L4-scene.jpg** (left / scene panel) ← `src-l4-scene-apennines.png`
 - Telescopic view of the Apennine range along the terminator, Mare Imbrium to
   the west. 626 × 872 source.
-- Supplied by Aaron from `(private archive)/`.
+- Supplied by Aaron (private archive).
   **Attribution / licence not verified.** A burned-in caption
   ("Raleigh - Stagecoach · April 10, 2008") points to a Raleigh, NC amateur
   capture; origin to confirm.
@@ -123,7 +123,7 @@ telescope shows from Earth.
 **plate-L6-scene.jpg** (left / scene panel) ← `src-l6-scene-tycho-wide.png`
 - Wide telescopic view of the southern highlands with Tycho and its rays.
   411 × 495 source (low resolution; fine for screen, soft for print).
-- Supplied by Aaron from `(private archive)/`.
+- Supplied by Aaron (private archive).
   **Attribution / licence not verified.**
 - Processing: resized to 1000 px wide, EXIF stripped, JPEG q82.
 
