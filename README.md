@@ -22,8 +22,10 @@ runs from any static web server:
 python3 -m http.server 8002      # then open http://localhost:8002
 ```
 
-The header has previous / next controls, a jump-to-number box, and a
-Both / Front / Back toggle. Below it, a grouping strip with a
+The header has previous / next controls, a jump-to-number box, a search box,
+and a Both / Front / Back toggle. Search looks through names, Latin names,
+zones, categories, epochs and the card-back text. Results open in a list under
+the box, with name matches first. Below the header is a grouping strip with a
 `Num · Colour · Phase` switch:
 
 - **Num** — ten pills of ten (`1–10` … `91–100`), tinted along a difficulty
@@ -34,7 +36,7 @@ Both / Front / Back toggle. Below it, a grouping strip with a
   windows, with a caption and a **Tonight** switch that highlights the phase
   for the current date.
 
-Click any card image to view it full size. Keyboard: `←` / `→` to move,
+Click any card image to view it full size. Keyboard: `/` to search, `←` / `→` to move,
 `F` / `B` / `D` for front / back / both, `Esc` to close an enlarged image.
 The URL tracks the current card (`index.html#L42`), so links are shareable.
 
@@ -48,6 +50,7 @@ index.html            the viewer app
 docs/users-guide.md    full walkthrough of the viewer  (+ users-guide.pdf)
 css/card.css           the card styling (imports fonts/fonts.css)
 js/card.js             the front / back card renderer
+js/search.js           the card search (matching and ranking)
 fonts/                 Chakra Petch · Saira Condensed · Barlow  (SIL OFL 1.1)
 data/lunar100.js       the 100-feature list (numbering, names, coordinates, sizes)
 data/cards.js          the written content for each card
