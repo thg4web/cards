@@ -116,7 +116,77 @@
     text-align:center; color:var(--muted); font-size:12px; margin-top:26px;
     font-family:"Saira Condensed",system-ui,sans-serif; letter-spacing:.05em; text-transform:uppercase;
   }
-  @media (max-width:720px){ .bar .brand{width:100%} }
+  /* search box + results dropdown (Bug 1) */
+  .search{position:relative; display:flex; align-items:center}
+  .search .sicon{
+    position:absolute; left:9px; width:14px; height:14px; pointer-events:none;
+    fill:none; stroke:var(--muted); stroke-width:2.2; stroke-linecap:round;
+  }
+  .search input{
+    width:230px; margin:0; appearance:none; -webkit-appearance:none; outline:none;
+    font-family:"Barlow",system-ui,sans-serif; font-size:13px; line-height:1.2; color:var(--ink);
+    background:var(--panel); border:1px solid var(--line); border-radius:5px;
+    padding:6px 30px 6px 29px;
+  }
+  .search input::placeholder{color:var(--muted)}
+  .search input::-webkit-search-cancel-button{-webkit-appearance:none; display:none}
+  .search input:focus{border-color:var(--accent)}
+  .search input:focus + .sicon, .search:focus-within .sicon{stroke:var(--accent)}
+  .search .skey{
+    position:absolute; right:7px; pointer-events:none;
+    font-family:"Saira Condensed",system-ui,sans-serif; font-size:11px; line-height:1.2;
+    color:var(--muted); border:1px solid var(--line); border-radius:3px; padding:1px 6px;
+  }
+  .search input:focus ~ .skey, .search input:not(:placeholder-shown) ~ .skey{display:none}
+  .sres{
+    position:absolute; top:calc(100% + 6px); right:0; z-index:30;
+    width:420px; max-width:calc(100vw - 36px); max-height:min(70vh,540px); overflow-y:auto;
+    background:var(--panel); border:1px solid var(--line); border-top:2px solid var(--accent);
+    border-radius:6px; box-shadow:0 16px 44px rgba(0,0,0,.65); padding:4px 0 6px;
+  }
+  .sres[hidden]{display:none}
+  .sres .scount, .sres .snone{
+    font-family:"Saira Condensed",system-ui,sans-serif; text-transform:uppercase;
+    letter-spacing:.09em; font-size:11px; color:var(--muted); padding:7px 14px 5px;
+  }
+  .sres .snone{padding:12px 14px}
+  .sres .sr{
+    display:flex; align-items:flex-start; gap:10px; padding:7px 14px 7px 12px;
+    cursor:pointer; border-left:2px solid transparent;
+  }
+  .sres .sr.on{background:rgba(227,106,30,.11); border-left-color:var(--accent)}
+  .sr .sl{
+    flex:none; min-width:40px; padding-top:1px;
+    font-family:"Saira Condensed",system-ui,sans-serif; font-weight:600; font-size:13px;
+    letter-spacing:.04em; color:var(--accent); white-space:nowrap;
+  }
+  .sr .sb{flex:1; min-width:0}
+  .sr .sn{
+    display:block; font-family:"Chakra Petch",system-ui,sans-serif; font-weight:600;
+    text-transform:uppercase; letter-spacing:.03em; font-size:13px; color:var(--ink);
+  }
+  .sr .sn .alt{
+    font-family:"Barlow",system-ui,sans-serif; font-weight:400; text-transform:none;
+    letter-spacing:0; font-size:12px; color:var(--muted); margin-left:7px;
+  }
+  .sr .ss{
+    display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden;
+    margin-top:2px; font-size:12px; line-height:1.4; color:var(--muted);
+  }
+  .sr .ss b{
+    font-family:"Saira Condensed",system-ui,sans-serif; font-weight:600; text-transform:uppercase;
+    letter-spacing:.07em; font-size:10.5px; color:#bdb6aa; margin-right:6px;
+  }
+  .sr mark{background:none; color:var(--accent); font-weight:600}
+  .sr .sz{flex:none; width:8px; height:8px; border-radius:50%; margin-top:6px}
+  .sr .sz.none{border:1px solid var(--line)}
+
+  @media (max-width:720px){
+    .bar .brand{width:100%}
+    .search{order:10; flex:1 1 100%}
+    .search input{width:100%}
+    .sres{left:0; right:0; width:auto; max-width:none}
+  }
 
   /* click any card image to see it full size */
   #stage img{cursor:zoom-in}
@@ -149,6 +219,14 @@
   <span class="title"><span class="l" id="tl">L 5</span><span id="tn">Copernicus</span></span>
   <span class="meta" id="tm"></span>
   <span class="spacer"></span>
+  <div class="search" id="search">
+    <input type="search" id="q" placeholder="Search cards" autocomplete="off" spellcheck="false"
+           role="combobox" aria-label="Search the cards" aria-autocomplete="list"
+           aria-expanded="false" aria-controls="sres">
+    <svg class="sicon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.4 15.4L21 21"/></svg>
+    <kbd class="skey" aria-hidden="true">/</kbd>
+    <div class="sres" id="sres" role="listbox" aria-label="Matching cards" hidden></div>
+  </div>
   <div class="toggle" id="group" title="Group the strip by decade, lunar zone, or Moon phase">
     <b data-g="num" class="on">Num</b>
     <b data-g="color">Color</b>
@@ -167,7 +245,7 @@
 
 <main>
   <div class="stage" id="stage"></div>
-  <p class="hint">← → to move &nbsp;·&nbsp; F / B to flip &nbsp;·&nbsp; click an image for full size &nbsp;·&nbsp; deep-link with #L5</p>
+  <p class="hint">/ to search &nbsp;·&nbsp; ← → to move &nbsp;·&nbsp; F / B to flip &nbsp;·&nbsp; click an image for full size &nbsp;·&nbsp; deep-link with #L5</p>
 </main>
 
 <div class="lightbox" id="lightbox"><button class="lx-close" aria-label="Close">✕</button><img alt="Full-size plate"></div>
@@ -175,6 +253,7 @@
 <script src="data/lunar100.js"></script>
 <script src="data/cards.js"></script>
 <script src="js/card.js"></script>
+<script src="js/search.js"></script>
 <script>
 (function () {
   "use strict";
@@ -425,7 +504,9 @@
   });
   window.addEventListener("keydown", function (e) {
     if (e.target.tagName === "INPUT") return;
-    if (e.key === "ArrowLeft") { step(-1); }
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.key === "/") { e.preventDefault(); q.focus(); q.select(); }
+    else if (e.key === "ArrowLeft") { step(-1); }
     else if (e.key === "ArrowRight") { step(1); }
     else if (e.key.toLowerCase() === "f") { view = "front"; syncToggle(); render(); }
     else if (e.key.toLowerCase() === "b") { view = "back"; syncToggle(); render(); }
@@ -436,6 +517,116 @@
       c.classList.toggle("on", c.dataset.v === view);
     });
   }
+
+  // ---- search (Bug 1): header box + dropdown; matching + ranking in js/search.js ----
+  // Searches names, Latin names, Wood's line, zone, category, epoch and the
+  // card-back text. Click a result or press Enter to open it; / focuses the
+  // box, ↑ ↓ move, Esc closes (a second Esc clears).
+  var q = document.getElementById("q");
+  var sres = document.getElementById("sres");
+  var searchEl = document.getElementById("search");
+  var ZONE_TINT = {};
+  ZONES.forEach(function (z) { ZONE_TINT[z[0]] = z[2]; });
+  var hits = [], hot = -1;
+
+  function escH(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c];
+    });
+  }
+  function marked(text, ranges) {        // escape, wrapping each [start,end) in <mark>
+    var out = "", at = 0;
+    (ranges || []).forEach(function (r) {
+      out += escH(text.slice(at, r[0])) + "<mark>" + escH(text.slice(r[0], r[1])) + "</mark>";
+      at = r[1];
+    });
+    return out + escH(text.slice(at));
+  }
+  function showResults(on) {
+    sres.hidden = !on;
+    q.setAttribute("aria-expanded", on ? "true" : "false");
+    if (!on) q.removeAttribute("aria-activedescendant");
+  }
+  function setHot(k) {
+    hot = k;
+    Array.prototype.forEach.call(sres.querySelectorAll(".sr"), function (el) {
+      var on = Number(el.dataset.k) === k;
+      el.classList.toggle("on", on);
+      el.setAttribute("aria-selected", on ? "true" : "false");
+      if (on) { q.setAttribute("aria-activedescendant", el.id); el.scrollIntoView({ block:"nearest" }); }
+    });
+  }
+  function runSearch() {
+    var text = q.value.trim();
+    if (!text) { hits = []; showResults(false); return; }
+    var r = LFCSearch.query(text);
+    hits = r || [];
+    var html;
+    if (r === null) html = '<div class="snone">Keep typing: two letters, or an L number</div>';
+    else if (!hits.length) html = '<div class="snone">No cards match “' + escH(text) + '”</div>';
+    else html = '<div class="scount">' + hits.length + (hits.length === 1 ? " card" : " cards") + '</div>' +
+      hits.map(function (h, k) {
+        var zl = LFC.ZONE_LABEL[h.zone] ? LFC.ZONE_LABEL[h.zone].join(" ") : "";
+        var sub = h.hit
+          ? '<b>' + escH(h.hit.label) + '</b>' + marked(h.hit.text, h.hit.ranges)
+          : escH([zl, LFC.CAT_LABEL[h.cat]].filter(Boolean).join(" · "));
+        var tint = ZONE_TINT[h.zone];
+        return '<div class="sr" role="option" id="sr' + k + '" data-k="' + k + '" aria-selected="false">' +
+          '<span class="sl">L ' + h.lNum + '</span>' +
+          '<span class="sb"><span class="sn">' + marked(h.name, h.nameRanges) +
+            (h.alt ? '<span class="alt">' + marked(h.alt, h.altRanges) + '</span>' : '') +
+          '</span><span class="ss">' + sub + '</span></span>' +
+          '<i class="sz' + (tint ? '' : ' none') + '"' + (tint ? ' style="background:' + tint + '"' : '') +
+            ' title="' + escH(zl || "No zone") + '"></i>' +
+        '</div>';
+      }).join("");
+    sres.innerHTML = html;
+    sres.scrollTop = 0;
+    showResults(true);
+    setHot(hits.length ? 0 : -1);
+  }
+  function openHit(k) {
+    var h = hits[k];
+    if (!h) return;
+    if (curList.indexOf(h.i) < 0) todayOnly = false;   // jumping out of tonight's phase
+    idx = h.i;
+    showResults(false);
+    q.blur();
+    render();
+    window.scrollTo(0, 0);
+  }
+
+  q.addEventListener("input", runSearch);
+  q.addEventListener("focus", function () { if (q.value.trim()) runSearch(); });
+  q.addEventListener("blur", function () {        // late, so a tap on a result still lands
+    setTimeout(function () { if (document.activeElement !== q) showResults(false); }, 150);
+  });
+  q.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      e.preventDefault();
+      if (sres.hidden) { runSearch(); return; }
+      if (!hits.length) return;
+      var d = e.key === "ArrowDown" ? 1 : -1;
+      setHot((hot + d + hits.length) % hits.length);
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (!sres.hidden && hits.length) openHit(hot < 0 ? 0 : hot);
+    } else if (e.key === "Escape") {
+      e.preventDefault();
+      if (!sres.hidden) showResults(false);
+      else if (q.value) q.value = "";
+      else q.blur();
+    }
+  });
+  sres.addEventListener("mousedown", function (e) { e.preventDefault(); });  // keep focus in the box
+  sres.addEventListener("mousemove", function (e) {
+    var el = e.target.closest(".sr");
+    if (el && Number(el.dataset.k) !== hot) setHot(Number(el.dataset.k));
+  });
+  sres.addEventListener("click", function (e) {
+    var el = e.target.closest(".sr");
+    if (el) openHit(Number(el.dataset.k));
+  });
 
   // lightbox: click any plate (locator, close-up, or the inset) to see it full
   var lb = document.getElementById("lightbox");
